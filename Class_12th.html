@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Class 12th CBSE & BSEB Notes Portal | Pratap Sanjay Sir</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome 6.5.1 CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #050811;
+            --card-bg: rgba(13, 22, 41, 0.75);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --cbse-blue: #38bdf8;
+            --bseb-gold: #f59e0b;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: #f1f5f9;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Interactive Particle Background */
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Ambient Glow & Radial Lighting */
+        .glow-orb-cbse {
+            position: absolute;
+            top: -5%;
+            left: 10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.16) 0%, rgba(0, 0, 0, 0) 70%);
+            animation: pulseGlow 8s ease-in-out infinite alternate;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glow-orb-bseb {
+            position: absolute;
+            top: 35%;
+            right: 5%;
+            width: 550px;
+            height: 550px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.14) 0%, rgba(0, 0, 0, 0) 70%);
+            animation: pulseGlow 10s ease-in-out infinite alternate-reverse;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes pulseGlow {
+            0% { opacity: 0.3; transform: scale(0.9) translateY(0px); }
+            100% { opacity: 0.8; transform: scale(1.15) translateY(20px); }
+        }
+
+        /* Glassmorphism Styling */
+        .glass-panel {
+            background: rgba(10, 16, 31, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(18, 28, 50, 0.8) 0%, rgba(8, 14, 28, 0.9) 100%);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.25);
+        }
+
+        .glass-card-cbse:hover {
+            border-color: rgba(56, 189, 248, 0.5);
+            box-shadow: 0 20px 35px -10px rgba(56, 189, 248, 0.25), 0 0 15px rgba(56, 189, 248, 0.15);
+        }
+
+        .glass-card-bseb:hover {
+            border-color: rgba(245, 158, 11, 0.5);
+            box-shadow: 0 20px 35px -10px rgba(245, 158, 11, 0.25), 0 0 15px rgba(245, 158, 11, 0.15);
+        }
+
+        /* Gradient Border Glow Animation */
+        .animated-gradient-border {
+            position: relative;
+            border-radius: 1.25rem;
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #f59e0b, #38bdf8);
+            background-size: 300% 300%;
+            animation: gradientBorder 6s ease infinite;
+            padding: 1.5px;
+        }
+
+        @keyframes gradientBorder {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Ticker Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: marquee 25s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* Pulse Dot Animation */
+        .pulse-live-dot {
+            box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+            animation: pulseRing 2s infinite;
+        }
+
+        @keyframes pulseRing {
+            0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+        }
+
+        /* Floating Badge Animation */
+        .floating-anim {
+            animation: floatUpDown 3.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatUpDown {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-8px); }
+        }
+
+        /* Shimmer Effect on Buttons */
+        .btn-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(60deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+            transform: rotate(30deg);
+            animation: shimmerEffect 4s infinite;
+        }
+
+        @keyframes shimmerEffect {
+            0% { transform: translate(-100%, -100%) rotate(30deg); }
+            20% { transform: translate(100%, 100%) rotate(30deg); }
+            100% { transform: translate(100%, 100%) rotate(30deg); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050811;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #38bdf8;
+        }
+
+        /* Board Tab Pill Active State */
+        .board-tab.active-cbse {
+            background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+        }
+
+        .board-tab.active-bseb {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
+        }
+
+        .stream-pill.active {
+            background: #1e293b;
+            color: #38bdf8;
+            border-color: #38bdf8;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen text-slate-100 flex flex-col justify-between antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Interactive Canvas Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Background Glow Orbs -->
+    <div class="glow-orb-cbse"></div>
+    <div class="glow-orb-bseb"></div>
+
+    <!-- Top Announcement Live Marquee Bar -->
+    <div class="sticky top-0 z-50 glass-panel border-b border-slate-800/90 bg-slate-950/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2 flex items-center justify-between text-xs">
+            <!-- Left Live Tag -->
+            <div class="flex items-center space-x-2 shrink-0">
+                <span class="bg-indigo-600/30 text-indigo-300 border border-indigo-500/40 px-2.5 py-0.5 rounded-full font-extrabold text-[11px] flex items-center gap-1.5 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-live-dot"></span>
+                    Live
+                </span>
+                <span class="hidden sm:inline font-semibold text-slate-300">Free 12th CBSE & Bihar Board (BSEB) Notes by Pratap Sanjay Sir</span>
+            </div>
+
+            <!-- Middle Animated Marquee Text -->
+            <div class="overflow-hidden whitespace-nowrap mx-3 max-w-md lg:max-w-xl hidden md:block relative">
+                <div class="animate-marquee font-medium text-slate-300 text-xs">
+                    <span class="mx-6"><i class="fas fa-fire text-amber-400 mr-1"></i> Class 12th CBSE 2025-26 NCERT Solutions & Chapterwise Derivations PDF</span>
+                    <span class="mx-6"><i class="fas fa-star text-amber-400 mr-1"></i> BSEB 12th Bihar Board 100 Marks Hindi & English + 50% VVI Objectives Solved!</span>
+                </div>
+            </div>
+
+            <!-- Right Social Channel Quick Links -->
+            <div class="flex items-center space-x-2.5 shrink-0 text-slate-300">
+                <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp"><i class="fab fa-whatsapp text-sm sm:text-base"></i></a>
+                <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram"><i class="fab fa-telegram text-sm sm:text-base"></i></a>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube"><i class="fab fa-youtube text-sm sm:text-base"></i></a>
+                
+                <a href="#board-switch-section" class="ml-1 bg-gradient-to-r from-sky-500 to-indigo-600 text-white text-[11px] px-2.5 py-1 rounded-lg transition-all font-bold flex items-center gap-1 shadow-md hover:brightness-110">
+                    Quick Select <i class="fas fa-arrow-down text-[9px]"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="relative z-40 max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4 w-full">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 glass-panel p-3 sm:p-4 rounded-2xl border border-slate-800 shadow-2xl">
+            
+            <!-- Brand Logo & Teacher Info -->
+            <div class="flex items-center justify-between w-full md:w-auto">
+                <div class="flex items-center space-x-3">
+                    <div class="relative group cursor-pointer" onclick="scrollToTop()">
+                        <img src="Pratap Sanjay Kumar.png" 
+                             alt="Pratap Sanjay Sir" 
+                             class="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-sky-400 object-cover shadow-lg transition-transform duration-300 group-hover:scale-105">
+                        <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
+                    </div>
+                    <div>
+                        <h1 class="text-lg sm:text-xl font-black tracking-tight text-white flex items-center gap-2">
+                            Class 12th Portal
+                            <span class="text-[10px] bg-sky-500/20 text-sky-300 px-2 py-0.5 rounded-md font-bold border border-sky-500/30">PRO</span>
+                        </h1>
+                        <p class="text-[10px] sm:text-[11px] text-slate-400 font-bold tracking-wider uppercase">BY PRATAP SANJAY SIR</p>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Hamburger Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 rounded-xl bg-slate-900/80 border border-slate-800" aria-label="Toggle Menu">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Central Navigation Links -->
+            <nav id="nav-menu" class="hidden md:flex items-center space-x-1 sm:space-x-2 w-full md:w-auto overflow-x-auto py-1">
+                <a href="#hero" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-sky-500/20 text-sky-300 border border-sky-500/30 hover:bg-sky-500 hover:text-white">
+                    Home
+                </a>
+                <a href="#cbse-12th-section" class="px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-300 hover:text-sky-400 hover:bg-slate-800/80 transition-all flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-sky-400"></span> 12th CBSE
+                </a>
+                <a href="#bseb-12th-section" class="px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-300 hover:text-amber-400 hover:bg-slate-800/80 transition-all flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span> 12th BSEB
+                </a>
+                <a href="#handbooks-section" class="px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">
+                    Formula Sheets
+                </a>
+            </nav>
+
+            <!-- Actions Header Right -->
+            <div class="hidden lg:flex items-center space-x-3">
+                <button onclick="scrollToSection('cbse-12th-section')" class="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-sky-500/20 transition-all flex items-center gap-2 btn-shimmer">
+                    <i class="fas fa-graduation-cap"></i> CBSE Notes
+                </button>
+                <button onclick="scrollToSection('bseb-12th-section')" class="bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-amber-500/20 transition-all flex items-center gap-2 btn-shimmer">
+                    <i class="fas fa-book-bookmark"></i> BSEB Notes
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section Container -->
+    <main class="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-8 w-full flex-grow" id="hero">
+        
+        <!-- Hero Title Header with Glow & Animation -->
+        <div class="text-center my-4 sm:my-8 relative">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-sky-300 text-xs font-bold mb-4 shadow-xl floating-anim">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                Specialized Senior Secondary Class 12th Hub
+            </div>
+            
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight sm:leading-none">
+                Class 12th <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-indigo-300 to-amber-400">CBSE & Bihar Board</span> Portal
+            </h2>
+            
+            <p class="mt-3 sm:mt-4 text-slate-300 text-xs sm:text-base max-w-3xl mx-auto leading-relaxed px-2 font-medium">
+                High-quality handwritten notes, NCERT chapterwise derivations, 50% VVI objective OMR practice, formula cheat-sheets, and 10-year board question banks crafted by <strong class="text-sky-400">Pratap Sanjay Sir</strong>.
+            </p>
+
+            <!-- Quick Board Selection Cards (Dual Section Switcher for Mobile & Desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 max-w-4xl mx-auto" id="board-switch-section">
+                
+                <!-- CARD 1: 12th CBSE Section Quick Link -->
+                <div class="animated-gradient-border group cursor-pointer" onclick="scrollToSection('cbse-12th-section')">
+                    <div class="bg-slate-950/90 p-5 rounded-[1.15rem] h-full flex items-center justify-between hover:bg-slate-900/90 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 border border-sky-500/30 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-lg font-black text-white">Class 12th CBSE</h3>
+                                    <span class="text-[10px] bg-sky-500/20 text-sky-300 border border-sky-500/40 px-2 py-0.5 rounded-md font-bold">NCERT</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mt-0.5">Physics, Chemistry, Maths, Bio, English Core</p>
+                            </div>
+                        </div>
+                        <div class="w-9 h-9 rounded-xl bg-slate-800 text-sky-400 flex items-center justify-center group-hover:bg-sky-500 group-hover:text-white transition-all shrink-0">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2: 12th BSEB Section Quick Link -->
+                <div class="animated-gradient-border group cursor-pointer" onclick="scrollToSection('bseb-12th-section')">
+                    <div class="bg-slate-950/90 p-5 rounded-[1.15rem] h-full flex items-center justify-between hover:bg-slate-900/90 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-book-open text-amber-400"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-lg font-black text-white">Class 12th BSEB (बिहार बोर्ड)</h3>
+                                    <span class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-md font-bold">100 Marks</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mt-0.5">50% VVI Objectives, Hindi Digant, English Rainbow</p>
+                            </div>
+                        </div>
+                        <div class="w-9 h-9 rounded-xl bg-slate-800 text-amber-400 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition-all shrink-0">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Filter Toolbar & Live Search Control -->
+        <div class="glass-panel p-3.5 sm:p-5 rounded-2xl mb-10 border border-slate-800 shadow-2xl">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                
+                <!-- View Mode Switcher -->
+                <div class="flex items-center bg-slate-950/90 p-1.5 rounded-xl border border-slate-800/90 w-full lg:w-auto">
+                    <button id="view-tab-all" onclick="setBoardFilter('all')" class="board-tab active-cbse flex-1 lg:flex-none px-4 sm:px-5 py-2 rounded-lg text-xs font-extrabold transition-all flex items-center justify-center gap-2">
+                        <i class="fas fa-layer-group"></i> All Sections
+                    </button>
+                    <button id="view-tab-cbse" onclick="setBoardFilter('cbse')" class="board-tab flex-1 lg:flex-none px-4 sm:px-5 py-2 rounded-lg text-xs font-extrabold text-slate-400 hover:text-white transition-all flex items-center justify-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span> 12th CBSE Only
+                    </button>
+                    <button id="view-tab-bseb" onclick="setBoardFilter('bseb')" class="board-tab flex-1 lg:flex-none px-4 sm:px-5 py-2 rounded-lg text-xs font-extrabold text-slate-400 hover:text-white transition-all flex items-center justify-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span> 12th BSEB Only
+                    </button>
+                </div>
+
+                <!-- Stream Category Pills -->
+                <div class="flex items-center space-x-2 overflow-x-auto w-full lg:w-auto pb-1 lg:pb-0 scrollbar-none">
+                    <button onclick="setStreamFilter('all', this)" class="stream-pill active bg-slate-800 border border-slate-700 text-xs px-3.5 py-2 rounded-xl font-semibold shrink-0 transition-all">
+                        All Subjects
+                    </button>
+                    <button onclick="setStreamFilter('science', this)" class="stream-pill bg-slate-950 hover:bg-slate-800 border border-slate-800 text-xs px-3.5 py-2 rounded-xl font-semibold shrink-0 transition-all text-slate-400">
+                        Science (PCM/PCB)
+                    </button>
+                    <button onclick="setStreamFilter('language', this)" class="stream-pill bg-slate-950 hover:bg-slate-800 border border-slate-800 text-xs px-3.5 py-2 rounded-xl font-semibold shrink-0 transition-all text-slate-400">
+                        Hindi & English
+                    </button>
+                </div>
+
+                <!-- Search Box -->
+                <div class="relative w-full lg:w-72">
+                    <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+                    <input type="text" id="subject-search" onkeyup="handleLiveSearch()" placeholder="Search Subject or Topic..." 
+                           class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-xs sm:text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-all">
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 1: CLASS 12TH CBSE BOARD NOTES -->
+        <section id="cbse-12th-section" class="mb-14 scroll-mt-24">
+            <div class="glass-panel p-4 sm:p-6 rounded-3xl border border-sky-500/20 bg-slate-950/60 shadow-2xl mb-6">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-slate-800/80">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-2xl bg-sky-500/20 text-sky-400 border border-sky-500/30 flex items-center justify-center text-xl shrink-0 shadow-lg">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2">
+                                Class 12th CBSE Board Notes
+                                <span class="text-[10px] bg-sky-500/20 text-sky-300 border border-sky-500/40 px-2.5 py-0.5 rounded-full font-bold">Central Board</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-0.5">Full NCERT Syllabus, Chapterwise Handwritten Notes, Numerical Derivations & Solved Exemplars</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-sky-400 bg-sky-950/80 border border-sky-800/80 px-3 py-1.5 rounded-xl self-start sm:self-auto">
+                        <i class="fas fa-check-circle mr-1"></i> NCERT 2025-26 Pattern
+                    </span>
+                </div>
+
+                <!-- CBSE Subject Cards Grid Container -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-6" id="cbse-cards-container">
+                    <!-- Cards populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CLASS 12TH BSEB (BIHAR BOARD) NOTES -->
+        <section id="bseb-12th-section" class="mb-14 scroll-mt-24">
+            <div class="glass-panel p-4 sm:p-6 rounded-3xl border border-amber-500/20 bg-slate-950/60 shadow-2xl mb-6">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-slate-800/80">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center text-xl shrink-0 shadow-lg">
+                            <i class="fas fa-book-bookmark"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2">
+                                Class 12th BSEB (बिहार बोर्ड) Notes
+                                <span class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2.5 py-0.5 rounded-full font-bold">Bihar Board</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-0.5">100 Marks Exam Pattern: 50% VVI Objective MCQs, Short & Long Answer Handwritten Notes</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-amber-400 bg-amber-950/80 border border-amber-800/80 px-3 py-1.5 rounded-xl self-start sm:self-auto">
+                        <i class="fas fa-check-circle mr-1"></i> 50% VVI Objective OMR
+                    </span>
+                </div>
+
+                <!-- BSEB Subject Cards Grid Container -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-6" id="bseb-cards-container">
+                    <!-- Cards populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Empty State Container -->
+        <div id="empty-search-state" class="hidden text-center py-12 glass-panel rounded-2xl border border-slate-800 my-8">
+            <i class="fas fa-search-minus text-4xl text-slate-600 mb-3"></i>
+            <h3 class="text-lg font-bold text-slate-300">No matching subjects or notes found</h3>
+            <p class="text-slate-500 text-xs mt-1 max-w-md mx-auto">Try searching with terms like "Physics", "Chemistry", "Hindi", "Calculus" or reset filters.</p>
+            <button onclick="resetAllFilters()" class="mt-4 bg-sky-600 hover:bg-sky-500 text-white text-xs px-5 py-2 rounded-xl font-bold transition-all shadow-lg">
+                Reset All Filters
+            </button>
+        </div>
+
+        <!-- Quick Handbooks & Formula Sheets Section -->
+        <section id="handbooks-section" class="mt-12 scroll-mt-24">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h3 class="text-2xl font-black text-white flex items-center gap-2">
+                        <i class="fas fa-bolt text-amber-400"></i> Quick Revision Formula Handbooks
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-0.5">One-click instant PDF access to formula charts, derivations, and model papers.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Physics Handbook -->
+                <div class="glass-card glass-card-cbse p-4 sm:p-5 rounded-2xl flex items-center space-x-3.5 border border-slate-800 cursor-pointer" onclick="openQuickPdfModal('physics')">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl shrink-0 border border-sky-500/30">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-slate-100 text-xs sm:text-sm">Physics Formula Booklet</h4>
+                        <p class="text-[11px] text-slate-400 mt-0.5">Derivations & Laws</p>
+                        <span class="inline-block text-[11px] text-sky-400 font-bold mt-1">Download PDF &rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Organic Chemistry Handbook -->
+                <div class="glass-card glass-card-cbse p-4 sm:p-5 rounded-2xl flex items-center space-x-3.5 border border-slate-800 cursor-pointer" onclick="openQuickPdfModal('chemistry')">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl shrink-0 border border-emerald-500/30">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-slate-100 text-xs sm:text-sm">Organic Chemistry Chart</h4>
+                        <p class="text-[11px] text-slate-400 mt-0.5">Name Reactions & Mechanisms</p>
+                        <span class="inline-block text-[11px] text-emerald-400 font-bold mt-1">Download PDF &rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Maths Calculus Handbook -->
+                <div class="glass-card glass-card-bseb p-4 sm:p-5 rounded-2xl flex items-center space-x-3.5 border border-slate-800 cursor-pointer" onclick="openQuickPdfModal('maths')">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0 border border-amber-500/30">
+                        <i class="fas fa-square-root-variable"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-slate-100 text-xs sm:text-sm">Maths Calculus Sheet</h4>
+                        <p class="text-[11px] text-slate-400 mt-0.5">Integration & Vectors</p>
+                        <span class="inline-block text-[11px] text-amber-400 font-bold mt-1">Download PDF &rarr;</span>
+                    </div>
+                </div>
+
+                <!-- BSEB 10 Yrs Model Papers -->
+                <div class="glass-card glass-card-bseb p-4 sm:p-5 rounded-2xl flex items-center space-x-3.5 border border-slate-800 cursor-pointer" onclick="openQuickPdfModal('bseb-bank')">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl shrink-0 border border-purple-500/30">
+                        <i class="fas fa-file-lines"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-slate-100 text-xs sm:text-sm">BSEB 10 Yrs Model Paper</h4>
+                        <p class="text-[11px] text-slate-400 mt-0.5">Solved Objectives 2015-2025</p>
+                        <span class="inline-block text-[11px] text-purple-400 font-bold mt-1">Download PDF &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Chapterwise Notes Detail Modal -->
+    <div id="notes-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-3 sm:p-4">
+        <div class="glass-panel w-full max-w-2xl rounded-2xl border border-slate-700/80 shadow-2xl p-5 sm:p-6 relative max-h-[85vh] flex flex-col justify-between overflow-hidden transform scale-95 transition-transform duration-300" id="modal-card-container">
+            
+            <!-- Modal Header -->
+            <div class="flex items-start justify-between pb-3 sm:pb-4 border-b border-slate-800">
+                <div class="flex items-center space-x-3">
+                    <div id="modal-subject-icon" class="w-11 h-11 rounded-xl bg-sky-600/20 text-sky-400 flex items-center justify-center text-xl border border-sky-500/30 shrink-0">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div>
+                        <h3 id="modal-subject-title" class="text-lg sm:text-xl font-black text-white">Subject Detail</h3>
+                        <p id="modal-subject-subtitle" class="text-xs text-sky-400 font-medium">Class 12th Free Educational Material</p>
+                    </div>
+                </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white bg-slate-900 p-2 rounded-xl border border-slate-800 transition-colors">
+                    <i class="fas fa-times text-base"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div id="modal-chapters-list" class="py-4 my-1 overflow-y-auto space-y-2.5 pr-1 text-xs sm:text-sm text-slate-300">
+                <!-- Chapters loaded dynamically -->
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5 text-[11px]"><i class="fas fa-shield-alt text-emerald-400"></i> Verified NCERT & Board Syllabus</span>
+                <button onclick="closeModal()" class="bg-slate-900 hover:bg-slate-800 text-slate-200 px-4 py-2 rounded-xl font-bold transition-all border border-slate-800">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Message -->
+    <div id="toast-box" class="fixed bottom-16 sm:bottom-6 right-4 sm:right-6 z-50 bg-slate-950 border border-sky-500/50 text-slate-100 px-4 py-3 rounded-2xl shadow-2xl flex items-center space-x-3 opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4">
+        <i class="fas fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="toast-text" class="text-xs sm:text-sm font-semibold">Download initiated successfully!</span>
+    </div>
+
+    <!-- Mobile Quick Section Switch Bar (Bottom Floating for Touch Devices) -->
+    <div class="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 md:hidden w-[92%] max-w-sm glass-panel p-1.5 rounded-2xl border border-slate-700/80 shadow-2xl flex items-center justify-around">
+        <button onclick="scrollToSection('cbse-12th-section')" class="flex-1 py-2 text-center text-xs font-black text-sky-300 hover:bg-slate-800/80 rounded-xl transition-all flex items-center justify-center gap-1">
+            <i class="fas fa-atom"></i> 12th CBSE
+        </button>
+        <div class="w-px h-6 bg-slate-800"></div>
+        <button onclick="scrollToSection('bseb-12th-section')" class="flex-1 py-2 text-center text-xs font-black text-amber-300 hover:bg-slate-800/80 rounded-xl transition-all flex items-center justify-center gap-1">
+            <i class="fas fa-book-bookmark"></i> 12th BSEB
+        </button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="relative z-10 bg-[#03060c] border-t border-slate-800/80 text-slate-300 pt-10 sm:pt-14 pb-20 sm:pb-10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-slate-800/80">
+                
+                <!-- Left Column: Branding, Teacher Info -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="Pratap Sanjay Kumar.png" 
+                             alt="Pratap Sanjay Sir Avatar" 
+                             class="w-12 h-12 rounded-full border-2 border-sky-400 object-cover shadow-lg">
+                        <div>
+                            <h3 class="text-base sm:text-lg font-bold text-white">CBSE & BSEB Notes Portal</h3>
+                            <p class="text-xs text-sky-400 font-semibold">By Pratap Sanjay Sir • Patna, Bihar</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal pt-1">
+                        Providing free top-grade handwritten study materials, board revision notes, and model test series for Class 12th students across India and Bihar State Board.
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="flex space-x-3 text-base text-slate-300 pt-1">
+            <a href="https://wa.me/917808343396" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-emerald-600 flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@AcademeX10th" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-red-600 flex items-center justify-center transition"><i class="fab fa-youtube"></i></a>
+            <a href="https://t.me/pratapsanjaysir" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-sky-500 flex items-center justify-center transition"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/pratapsanjaysir/" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-pink-600 flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100028492753930" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-blue-600 flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://goo.gl/maps/3kobz6EohxEYS3659" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-red-500 flex items-center justify-center transition" title="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+          </div>
+                </div>
+
+                <!-- Middle Column: Class Quick Links -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-xs font-black text-white tracking-wider uppercase">Class Quick Links</h4>
+                    <ul class="space-y-2 text-xs font-semibold text-slate-400">
+                        <li><a href="#cbse-12th-section" class="hover:text-sky-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-sky-400"></i> Class 12th CBSE Science</a></li>
+                        <li><a href="#bseb-12th-section" class="hover:text-amber-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-amber-400"></i> Class 12th BSEB Science (I.Sc.)</a></li>
+                        <li><a href="#bseb-12th-section" class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-emerald-400"></i> Bihar Board 100 Marks Hindi</a></li>
+                        <li><a href="#bseb-12th-section" class="hover:text-purple-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-purple-400"></i> Bihar Board 100 Marks English</a></li>
+                        <li><a href="#handbooks-section" class="hover:text-indigo-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-indigo-400"></i> Quick Revision Formula Sheet</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right Column: Official Info & Email Newsletter -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-xs font-black text-white tracking-wider uppercase">Official Channel</h4>
+                    <p class="text-xs text-slate-400">Receive free PDF notifications directly in your inbox.</p>
+                    <form onsubmit="handleSubscribeForm(event)" class="flex items-center pt-1">
+                        <input type="email" required placeholder="Enter student email..." 
+                               class="w-full bg-slate-950 border border-slate-800 rounded-l-xl px-3.5 py-2 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500">
+                        <button type="submit" class="bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs px-4 py-2 rounded-r-xl transition-all shadow-md shrink-0">
+                            Join
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Copyright Line -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+                <p>Designed for Class 12th Board Students by <strong class="text-slate-300">Pratap Sanjay Kumar</strong></p>
+                <p> © <span id="year"></span>Pratap Sanjay Sir. All rights reserved.</p>
+            </div>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+        </div>
+    </footer>
+
+    <script>
+        // Data Structure for Class 12th CBSE & BSEB Subjects
+        const class12Subjects = [
+            // ================= 12TH CBSE SUBJECTS =================
+            {
+                id: 'cbse-physics',
+                board: 'cbse',
+                stream: 'science',
+                title: 'Physics – Class 12th',
+                badgeText: 'CBSE 12th',
+                badgeStyle: 'bg-sky-500/20 text-sky-300 border-sky-500/40',
+                cardTheme: 'glass-card-cbse',
+                description: 'Electrostatics, Current Electricity, Optics, Magnetism, Modern Physics & Derivations.',
+                icon: 'fa-atom',
+                iconColor: 'text-sky-400',
+                chapters: [
+                    { title: 'Chapter 1: Electric Charges & Fields', desc: 'Derivations + Gauss Law Solved' },
+                    { title: 'Chapter 2: Electrostatic Potential & Capacitance', desc: 'Capacitor Energy Formula Sheet' },
+                    { title: 'Chapter 3: Current Electricity', desc: 'Kirchhoff Laws & Wheatstone Bridge' },
+                    { title: 'Chapter 4: Moving Charges & Magnetism', desc: 'Cyclotron & Biot-Savart Law' },
+                    { title: 'Chapter 9: Ray Optics and Instruments', desc: 'Lens Maker Formula & Prism' },
+                    { title: 'Chapter 14: Semiconductor Electronics', desc: 'PN Junction & Logic Gates' }
+                ]
+            },
+            {
+                id: 'cbse-chemistry',
+                board: 'cbse',
+                stream: 'science',
+                title: 'Chemistry – Class 12th',
+                badgeText: 'CBSE 12th',
+                badgeStyle: 'bg-sky-500/20 text-sky-300 border-sky-500/40',
+                cardTheme: 'glass-card-cbse',
+                description: 'Solutions, Electrochemistry, Chemical Kinetics, Haloalkanes, Name Reactions.',
+                icon: 'fa-flask',
+                iconColor: 'text-emerald-400',
+                chapters: [
+                    { title: 'Chapter 1: Solutions', desc: 'Henry Law & Raoult Law Numericals' },
+                    { title: 'Chapter 2: Electrochemistry', desc: 'Nernst Equation & Kohlrausch Law' },
+                    { title: 'Chapter 3: Chemical Kinetics', desc: 'First Order Integrated Rate Equations' },
+                    { title: 'Chapter 6: Haloalkanes and Haloarenes', desc: 'SN1 & SN2 Mechanism Charts' },
+                    { title: 'Chapter 8: Aldehydes, Ketones & Carboxylic', desc: 'Complete Name Reactions PDF' }
+                ]
+            },
+            {
+                id: 'cbse-maths',
+                board: 'cbse',
+                stream: 'science',
+                title: 'Mathematics – Class 12th',
+                badgeText: 'CBSE 12th',
+                badgeStyle: 'bg-sky-500/20 text-sky-300 border-sky-500/40',
+                cardTheme: 'glass-card-cbse',
+                description: 'Matrices, Determinants, Calculus (Integration & Continuity), Vectors & 3D Geometry.',
+                icon: 'fa-square-root-variable',
+                iconColor: 'text-indigo-400',
+                chapters: [
+                    { title: 'Chapter 3 & 4: Matrices & Determinants', desc: 'Cramer Rule & Inverse Matrix' },
+                    { title: 'Chapter 5: Continuity and Differentiability', desc: 'Chain Rule & Logarithmic Differentiation' },
+                    { title: 'Chapter 7: Integrals (Calculus)', desc: 'Substitution, Partial Fractions & By-Parts' },
+                    { title: 'Chapter 10: Vector Algebra', desc: 'Dot Product & Cross Product Formulae' },
+                    { title: 'Chapter 11: Three Dimensional Geometry', desc: 'Shortest Distance Between Lines' }
+                ]
+            },
+            {
+                id: 'cbse-biology',
+                board: 'cbse',
+                stream: 'science',
+                title: 'Biology – Class 12th',
+                badgeText: 'CBSE 12th',
+                badgeStyle: 'bg-sky-500/20 text-sky-300 border-sky-500/40',
+                cardTheme: 'glass-card-cbse',
+                description: 'Genetics, Molecular Inheritance, Biotechnology, Human Health & Reproductive System.',
+                icon: 'fa-dna',
+                iconColor: 'text-rose-400',
+                chapters: [
+                    { title: 'Chapter 2: Sexual Reproduction in Flowering Plants', desc: 'Double Fertilization Diagrams' },
+                    { title: 'Chapter 4: Principles of Inheritance', desc: 'Mendelian Crosses & Pedigree Analysis' },
+                    { title: 'Chapter 5: Molecular Basis of Inheritance', desc: 'DNA Replication & Transcription Unit' },
+                    { title: 'Chapter 9: Biotechnology Principles', desc: 'Recombinant DNA & PCR Process' }
+                ]
+            },
+            {
+                id: 'cbse-english',
+                board: 'cbse',
+                stream: 'language',
+                title: 'English Core – Class 12th',
+                badgeText: 'CBSE 12th',
+                badgeStyle: 'bg-sky-500/20 text-sky-300 border-sky-500/40',
+                cardTheme: 'glass-card-cbse',
+                description: 'Flamingo Prose & Poetry summaries, Vistas, Formal Writing formats & RTC questions.',
+                icon: 'fa-pen-nib',
+                iconColor: 'text-cyan-400',
+                chapters: [
+                    { title: 'Flamingo: The Last Lesson', desc: 'Chapter Summary + Solved RTC Questions' },
+                    { title: 'Flamingo: Lost Spring', desc: 'Theme Analysis & Character Sketches' },
+                    { title: 'Poetry: My Mother at Sixty-Six', desc: 'Stanza Explanations & Poetic Devices' },
+                    { title: 'Writing Skills Format Guide', desc: 'Notices, Invitations & Formal Letters' }
+                ]
+            },
+
+            // ================= 12TH BSEB (BIHAR BOARD) SUBJECTS =================
+            {
+                id: 'bseb-physics',
+                board: 'bseb',
+                stream: 'science',
+                title: 'भौतिकी (Physics) – 12th BSEB',
+                badgeText: 'BSEB Bihar',
+                badgeStyle: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
+                cardTheme: 'glass-card-bseb',
+                description: 'बिहार बोर्ड 100 अंक भौतिकी: 50% VVI Objective MCQs, लघु उत्तरीय & दीर्घ उत्तरीय प्रश्न.',
+                icon: 'fa-bolt',
+                iconColor: 'text-amber-400',
+                chapters: [
+                    { title: 'इकाई 1: स्थिर वैद्युतिकी (Electrostatics VVI)', desc: '35+ Repeated VVI Objective MCQs' },
+                    { title: 'इकाई 2: धारा विद्युत (Current Electricity)', desc: 'किरचॉफ नियम व व्हीटस्टोन सेतु सिद्धीकरण' },
+                    { title: 'इकाई 6: प्रकाशिकी (Optics - 14 Marks)', desc: 'लेंस मेकर सूत्र व दूरदर्शी' },
+                    { title: 'इकाई 9: अर्धचालक इलेक्ट्रॉनिकी', desc: 'N-Type & P-Type अंतर व डायोड' },
+                    { title: 'BSEB 10 Years Solved Question Bank', desc: '2015-2025 Objective Answer Key' }
+                ]
+            },
+            {
+                id: 'bseb-chemistry',
+                board: 'bseb',
+                stream: 'science',
+                title: 'रसायन शास्त्र (Chemistry) – 12th BSEB',
+                badgeText: 'BSEB Bihar',
+                badgeStyle: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
+                cardTheme: 'glass-card-bseb',
+                description: 'अकार्बनिक और कार्बनिक रसायन: बिहार बोर्ड OMR पैटर्न VVI वस्तुनिष्ठ प्रश्नोत्तर.',
+                icon: 'fa-flask-vial',
+                iconColor: 'text-yellow-400',
+                chapters: [
+                    { title: 'अध्याय 1: विलयन (Solutions)', desc: 'मोलरता, मोललता व परासरण दाब' },
+                    { title: 'अध्याय 2: वैद्युतरसायन (Electrochemistry)', desc: 'फैराडे के विद्युत अपघटन नियम' },
+                    { title: 'अध्याय 7: ऐल्कोहॉल, फ़ीनॉल एवं ईथर', desc: 'नाम अभिक्रिया चार्ट (Name Reactions)' },
+                    { title: 'BSEB 35 Marks OMR Special Practice', desc: 'VVI MCQ Model Sets 1 to 5' }
+                ]
+            },
+            {
+                id: 'bseb-maths',
+                board: 'bseb',
+                stream: 'science',
+                title: 'गणित (Mathematics) – 12th BSEB',
+                badgeText: 'BSEB Bihar',
+                badgeStyle: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
+                cardTheme: 'glass-card-bseb',
+                description: 'अवकलन, समाकलन, आव्यूह, सारणिक तथा सदिश: शॉर्टकट ट्रिक्स व 100 ऑब्जेक्टिव प्रश्न.',
+                icon: 'fa-calculator',
+                iconColor: 'text-orange-400',
+                chapters: [
+                    { title: 'अध्याय 3 & 4: आव्यूह एवं सारणिक', desc: 'VVI Short & Long Solved Questions' },
+                    { title: 'अध्याय 7: समाकलन (Integration Formula)', desc: 'सभी 50+ सूत्र एवं डायरेक्ट ऑब्जेक्टिव' },
+                    { title: 'अध्याय 10: सदिश बीजगणित (Vectors)', desc: 'अदिश व सदिश गुणनफल नोट्स' },
+                    { title: 'BSEB 100 Objectives Short Tricks', desc: '1-Click PDF Formula Book' }
+                ]
+            },
+            {
+                id: 'bseb-hindi',
+                board: 'bseb',
+                stream: 'language',
+                title: 'हिंदी दिगंत भाग-2 (100 Marks)',
+                badgeText: '100 Marks Hindi',
+                badgeStyle: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
+                cardTheme: 'glass-card-bseb',
+                description: 'गद्य खंड, काव्य खंड, हिंदी व्याकरण (समास, संधि, कारक, प्रत्यय) व निबंध लेखन.',
+                icon: 'fa-book-bookmark',
+                iconColor: 'text-emerald-400',
+                chapters: [
+                    { title: 'गद्य पाठ 1: बातचीत (बालकृष्ण भट्ट)', desc: 'सारांश + VVI Objective MCQs' },
+                    { title: 'गद्य पाठ 2: उसने कहा था (चंद्रधर शर्मा गुलेरी)', desc: 'कहानी का मूल भाव व व्याख्या' },
+                    { title: 'काव्य पाठ 1: कड़बक (मलिक मोहम्मद जायसी)', desc: 'भावार्थ एवं सप्रसंग व्याख्या' },
+                    { title: 'हिंदी व्याकरण (समास, संधि, उपसर्ग, प्रत्यय)', desc: '50 Marks Grammar Special PDF' }
+                ]
+            },
+            {
+                id: 'bseb-english',
+                board: 'bseb',
+                stream: 'language',
+                title: 'English Rainbow Part-2 (100 Marks)',
+                badgeText: '100 Marks English',
+                badgeStyle: 'bg-purple-500/20 text-purple-300 border-purple-500/40',
+                cardTheme: 'glass-card-bseb',
+                description: 'Prose, Poetry, Story of English, Grammar (Tense, Voice, Narration) & Essay Notes.',
+                icon: 'fa-pen-clip',
+                iconColor: 'text-purple-400',
+                chapters: [
+                    { title: 'Prose Ch 1: Indian Civilization and Culture', desc: 'Summary & Repeated MCQs' },
+                    { title: 'Prose Ch 2: Bharat is My Home', desc: 'Speech Key Notes & Explanation' },
+                    { title: 'Poetry Ch 1: Sweetest Love I Do Not Goe', desc: 'Line-by-Line Stanza Breakdown' },
+                    { title: 'Grammar Rules: Narration, Voice & Tense', desc: 'Objective Solved Exercise PDF' }
+                ]
+            }
+        ];
+
+        let activeBoardView = 'all';
+        let activeStreamView = 'all';
+
+        // Render Cards into CBSE and BSEB grids
+        function renderAllSubjectCards() {
+            const cbseContainer = document.getElementById('cbse-cards-container');
+            const bsebContainer = document.getElementById('bseb-cards-container');
+            const cbseSection = document.getElementById('cbse-12th-section');
+            const bsebSection = document.getElementById('bseb-12th-section');
+            const emptyState = document.getElementById('empty-search-state');
+            const query = document.getElementById('subject-search').value.toLowerCase().trim();
+
+            cbseContainer.innerHTML = '';
+            bsebContainer.innerHTML = '';
+
+            let cbseMatchCount = 0;
+            let bsebMatchCount = 0;
+
+            class12Subjects.forEach(subject => {
+                const matchesBoard = (activeBoardView === 'all') || (subject.board === activeBoardView);
+                const matchesStream = (activeStreamView === 'all') || (subject.stream === activeStreamView);
+                const matchesSearch = subject.title.toLowerCase().includes(query) ||
+                                      subject.description.toLowerCase().includes(query) ||
+                                      subject.chapters.some(ch => ch.title.toLowerCase().includes(query));
+
+                if (matchesBoard && matchesStream && matchesSearch) {
+                    const cardHTML = `
+                        <div class="glass-card ${subject.cardTheme} p-5 rounded-2xl flex flex-col justify-between relative group">
+                            <div>
+                                <!-- Card Header -->
+                                <div class="flex items-center justify-between mb-3.5">
+                                    <div class="w-11 h-11 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center ${subject.iconColor} text-xl shadow-inner group-hover:scale-110 transition-transform">
+                                        <i class="fas ${subject.icon}"></i>
+                                    </div>
+                                    <span class="text-[10px] font-extrabold px-3 py-1 rounded-full border ${subject.badgeStyle}">
+                                        ${subject.badgeText}
+                                    </span>
+                                </div>
+
+                                <!-- Card Title & Body -->
+                                <h4 class="text-lg font-black text-white mb-1.5 group-hover:text-sky-300 transition-colors">
+                                    ${subject.title}
+                                </h4>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-5">
+                                    ${subject.description}
+                                </p>
+                            </div>
+
+                            <!-- Card Action Buttons -->
+                            <div class="pt-3.5 border-t border-slate-800/80 flex items-center space-x-2.5">
+                                <button onclick="openSubjectModal('${subject.id}')" class="flex-1 bg-slate-950 hover:bg-sky-600 text-slate-200 hover:text-white text-xs font-bold py-2.5 px-3 rounded-xl transition-all border border-slate-800 hover:border-sky-400 flex items-center justify-center gap-2">
+                                    <i class="fas fa-book-open text-sky-400 group-hover:text-white"></i> Open Notes
+                                </button>
+                                <button onclick="openSubjectModal('${subject.id}')" class="bg-slate-950 hover:bg-slate-800 text-slate-400 hover:text-white p-2.5 rounded-xl border border-slate-800 transition-colors" title="Quick View">
+                                    <i class="fas fa-eye text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+
+                    if (subject.board === 'cbse') {
+                        cbseContainer.innerHTML += cardHTML;
+                        cbseMatchCount++;
+                    } else if (subject.board === 'bseb') {
+                        bsebContainer.innerHTML += cardHTML;
+                        bsebMatchCount++;
+                    }
+                }
+            });
+
+            // Adjust Visibility of main board sections
+            if (activeBoardView === 'cbse') {
+                cbseSection.classList.remove('hidden');
+                bsebSection.classList.add('hidden');
+            } else if (activeBoardView === 'bseb') {
+                cbseSection.classList.add('hidden');
+                bsebSection.classList.remove('hidden');
+            } else {
+                cbseSection.style.display = cbseMatchCount > 0 ? 'block' : 'none';
+                bsebSection.style.display = bsebMatchCount > 0 ? 'block' : 'none';
+            }
+
+            // Show empty search state if zero matches
+            if (cbseMatchCount === 0 && bsebMatchCount === 0) {
+                emptyState.classList.remove('hidden');
+            } else {
+                emptyState.classList.add('hidden');
+            }
+        }
+
+        // Set Board Filter
+        function setBoardFilter(board) {
+            activeBoardView = board;
+            document.querySelectorAll('.board-tab').forEach(b => {
+                b.classList.remove('active-cbse', 'active-bseb');
+                b.classList.add('text-slate-400');
+            });
+
+            const targetBtn = document.getElementById(`view-tab-${board}`);
+            if (targetBtn) {
+                targetBtn.classList.remove('text-slate-400');
+                if (board === 'bseb') targetBtn.classList.add('active-bseb');
+                else targetBtn.classList.add('active-cbse');
+            }
+            renderAllSubjectCards();
+        }
+
+        // Set Stream Filter
+        function setStreamFilter(stream, element) {
+            activeStreamView = stream;
+            document.querySelectorAll('.stream-pill').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            renderAllSubjectCards();
+        }
+
+        // Search Input Event
+        function handleLiveSearch() {
+            renderAllSubjectCards();
+        }
+
+        // Reset Filters
+        function resetAllFilters() {
+            document.getElementById('subject-search').value = '';
+            setBoardFilter('all');
+            setStreamFilter('all', document.querySelector('.stream-pill'));
+        }
+
+        // Open Modal Dialog for Subject Notes
+        function openSubjectModal(subjectId) {
+            const subject = class12Subjects.find(s => s.id === subjectId);
+            if (!subject) return;
+
+            document.getElementById('modal-subject-title').innerText = subject.title;
+            document.getElementById('modal-subject-subtitle').innerText = `${subject.badgeText} • Free Handwritten PDF Notes & Derivations`;
+
+            const modalIcon = document.getElementById('modal-subject-icon');
+            modalIcon.innerHTML = `<i class="fas ${subject.icon}"></i>`;
+
+            const listContainer = document.getElementById('modal-chapters-list');
+            listContainer.innerHTML = '';
+
+            subject.chapters.forEach((chapter, index) => {
+                const item = document.createElement('div');
+                item.className = 'bg-slate-950 border border-slate-800 hover:border-sky-500/40 p-3 rounded-xl flex items-center justify-between gap-3 transition-all';
+                item.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <span class="w-6 h-6 rounded-md bg-sky-500/10 text-sky-400 text-xs font-black flex items-center justify-center shrink-0 border border-sky-500/20">
+                            ${index + 1}
+                        </span>
+                        <div>
+                            <h5 class="font-extrabold text-slate-200 text-xs sm:text-sm">${chapter.title}</h5>
+                            <p class="text-[11px] text-slate-400">${chapter.desc}</p>
+                        </div>
+                    </div>
+                    <button onclick="triggerToastDownload('${chapter.title}')" class="bg-sky-600/20 hover:bg-sky-600 text-sky-300 hover:text-white border border-sky-500/30 text-xs px-3 py-1.5 rounded-lg transition-all font-semibold shrink-0 flex items-center gap-1.5">
+                        <i class="fas fa-file-pdf"></i> PDF
+                    </button>
+                `;
+                listContainer.appendChild(item);
+            });
+
+            showModal();
+        }
+
+        // Open Modal for Quick PDF Handbooks
+        function openQuickPdfModal(type) {
+            document.getElementById('modal-subject-title').innerText = 'Formula Booklet & Mindmap PDF';
+            document.getElementById('modal-subject-subtitle').innerText = 'Class 12th Board Quick Revision Material';
+
+            const listContainer = document.getElementById('modal-chapters-list');
+            listContainer.innerHTML = `
+                <div class="bg-slate-950 border border-sky-500/30 p-6 rounded-2xl text-center">
+                    <i class="fas fa-file-arrow-down text-4xl text-sky-400 mb-3"></i>
+                    <h5 class="font-black text-slate-100 text-base mb-1">Board Exam Formula & Revision Booklet PDF</h5>
+                    <p class="text-xs text-slate-400 mb-5">Handwritten derivations, shortcuts, and 10-year board model question answers.</p>
+                    <button onclick="triggerToastDownload('Formula Booklet PDF')" class="bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-bold text-xs px-6 py-2.5 rounded-xl shadow-lg transition-all inline-flex items-center gap-2">
+                        <i class="fas fa-download"></i> Download Complete PDF
+                    </button>
+                </div>
+            `;
+
+            showModal();
+        }
+
+        function showModal() {
+            const modal = document.getElementById('notes-modal');
+            const container = document.getElementById('modal-card-container');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            container.classList.remove('scale-95');
+            container.classList.add('scale-100');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('notes-modal');
+            const container = document.getElementById('modal-card-container');
+            container.classList.remove('scale-100');
+            container.classList.add('scale-95');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // Trigger Download Toast
+        function triggerToastDownload(title) {
+            showToastMessage(`Downloading: ${title}`);
+        }
+
+        function showToastMessage(msg) {
+            const toast = document.getElementById('toast-box');
+            const msgEl = document.getElementById('toast-text');
+            msgEl.innerText = msg;
+
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                toast.classList.remove('opacity-100', 'translate-y-0');
+            }, 3000);
+        }
+
+        // Subscribe Form Handler
+        function handleSubscribeForm(e) {
+            e.preventDefault();
+            showToastMessage("Subscribed! Updates will be delivered to your email.");
+            e.target.reset();
+        }
+
+        // Scroll Helper Functions
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Mobile Navigation Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('mt-3');
+        });
+
+        // Particle Background System
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function fitCanvasSize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class BackgroundParticle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.radius = Math.random() * 1.5 + 0.5;
+                this.vx = (Math.random() - 0.5) * 0.35;
+                this.vy = (Math.random() - 0.5) * 0.35;
+                this.alpha = Math.random() * 0.4 + 0.2;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.y < 0) this.y = canvas.height;
+                if (this.y > canvas.height) this.y = 0;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(56, 189, 248, ${this.alpha})`;
+                ctx.fill();
+            }
+        }
+
+        function createParticles() {
+            particles = [];
+            const count = Math.floor((canvas.width * canvas.height) / 20000);
+            for (let i = 0; i < count; i++) {
+                particles.push(new BackgroundParticle());
+            }
+        }
+
+        function renderParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 100) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(56, 189, 248, ${0.12 - distance / 1000})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(renderParticles);
+        }
+
+        // Initialize on Load
+        window.onload = function() {
+            fitCanvasSize();
+            createParticles();
+            renderParticles();
+            renderAllSubjectCards();
+        };
+
+        window.addEventListener('resize', () => {
+            fitCanvasSize();
+            createParticles();
+        });
+    </script>
+</body>
+</html>
