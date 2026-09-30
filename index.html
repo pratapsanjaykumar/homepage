@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBSE Notes by Pratap Sanjay Sir | Classes 6th - 12th & BSEB</title>
+  
+  <!-- Google Fonts & Font Awesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef4ff',
+              100: '#d9e6ff',
+              400: '#598cff',
+              500: '#3b71f7',
+              600: '#2554db',
+              dark: '#001a2b',
+              subdark: '#04253a',
+              carddark: '#083049',
+              accent: '#fe5f7b',
+              emerald: '#10b981'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Fira Sans"', 'sans-serif'],
+            fira: ['"Fira Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Prevent text selection and copying */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Allow inputs to be selectable */
+    input, textarea {
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+
+    /* Twinkling Universe Starry Background */
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    @keyframes moveStars {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-2000px); }
+    }
+
+    .universe-bg {
+      background: #000b18;
+      position: relative;
+      overflow: hidden;
+    }
+    .universe-bg::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #598cff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 230px 180px, #fe5f7b, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 320px 250px, #ffffff, rgba(0,0,0,0));
+      background-repeat: repeat;
+      background-size: 350px 350px;
+      opacity: 0.6;
+      animation: twinkle 4s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .glass-effect {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: #001a2b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #598cff;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f5f6f7] dark:bg-[#001422] text-slate-700 dark:text-slate-200 transition-colors duration-300 font-sans min-h-screen flex flex-col">
+
+  <header class="sticky top-0 z-50 w-full transition-all duration-300" id="mainHeader">
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-400 to-indigo-600 dark:from-brand-600 dark:to-brand-subdark text-white text-xs py-1.5 px-4 shadow-sm">
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+        <div class="flex items-center gap-2 font-medium">
+          <span class="bg-white/20 px-2 py-0.5 rounded-full text-[10px] tracking-wider uppercase font-bold flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Live
+          </span>
+          <span>Free CBSE 6th-12th &amp; BSEB Notes + NCERT Material by Pratap Sanjay Sir</span>
+        </div>
+        <!-- Social Quick Links -->
+        <div class="flex items-center space-x-3 text-sm">
+          <a href="https://wa.me/917808343396" target="_blank" rel="noopener" class="hover:text-green-300 transition-transform hover:scale-110" title="WhatsApp Channel"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://t.me/pratapsanjaysir" target="_blank" rel="noopener" class="hover:text-sky-300 transition-transform hover:scale-110" title="Telegram Channel"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://www.youtube.com/@AcademeX10th" target="_blank" rel="noopener" class="hover:text-red-400 transition-transform hover:scale-110" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/pratapsanjaysir/" target="_blank" rel="noopener" class="hover:text-pink-300 transition-transform hover:scale-110" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://mobile.twitter.com/DhanaruaPatna" target="_blank" rel="noopener" class="hover:text-sky-400 transition-transform hover:scale-110" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="bg-white/90 dark:bg-[#001a2b]/95 glass-effect border-b border-slate-200 dark:border-slate-800 shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          
+          <!-- Brand Logo & Title -->
+          <a href="#" class="flex items-center space-x-3 group">
+            <div class="w-10 h-10 rounded-xl overflow-hidden shadow-md ring-2 ring-brand-400/40 group-hover:scale-105 transition-all">
+              <img src="Pratap Sanjay Kumar.png" 
+                   alt="Pratap Sanjay Sir" 
+                   class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="block text-lg font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                CBSE <span class="text-brand-400">Notes</span>
+              </span>
+              <span class="text-[11px] font-medium text-slate-500 dark:text-slate-400 tracking-wider uppercase block">
+                By Pratap Sanjay Sir
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
+            <a href="#hero" class="px-3 py-1.5 text-sm font-semibold rounded-lg text-brand-500 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 transition">Home</a>
+            <a href="#classTabs" class="px-3 py-1.5 text-sm font-semibold rounded-lg text-slate-700 dark:text-slate-200 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Classes 6-12</a>
+            <a href="#recentNotes" class="px-3 py-1.5 text-sm font-semibold rounded-lg text-slate-700 dark:text-slate-200 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Latest Notes</a>
+            <a href="#videoSection" class="px-3 py-1.5 text-sm font-semibold rounded-lg text-slate-700 dark:text-slate-200 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Lectures</a>
+            <a href="https://ncerte-books.blogspot.com/" target="_blank" rel="noopener" class="px-3 py-1.5 text-sm font-semibold rounded-lg text-slate-700 dark:text-slate-200 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">NCERT Books</a>
+          </div>
+
+          <!-- Controls: Dark/Light Mode & Search Button -->
+          <div class="flex items-center space-x-2 sm:space-x-3">
+            <!-- Theme Toggle Button (Light/Black) -->
+            <button id="themeToggleBtn" 
+                    type="button" 
+                    aria-label="Toggle Dark/Light Mode"
+                    class="relative inline-flex items-center justify-center p-2 rounded-xl text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-brand-subdark hover:bg-brand-100 dark:hover:bg-slate-700 transition shadow-inner border border-slate-200 dark:border-slate-700">
+              <span class="sr-only">Toggle theme</span>
+              <i id="themeIcon" class="fas fa-moon text-lg transition-transform duration-300"></i>
+            </button>
+
+            <!-- Quick Class Jump CTA -->
+            <a href="#classTabs" class="hidden sm:inline-flex items-center gap-1.5 bg-brand-400 hover:bg-brand-500 text-white font-semibold text-xs uppercase tracking-wider px-3.5 py-2 rounded-xl shadow-md shadow-brand-400/25 transition transform active:scale-95">
+              <i class="fas fa-book-open"></i> Notes Direct
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileNavToggle" type="button" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 px-4 pt-3 pb-4 space-y-1.5 bg-white dark:bg-[#001a2b]">
+        <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-100 hover:bg-brand-50 dark:hover:bg-slate-800">Home</a>
+        <a href="#classTabs" class="block px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-100 hover:bg-brand-50 dark:hover:bg-slate-800">Classes 6 to 12</a>
+        <a href="#recentNotes" class="block px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-100 hover:bg-brand-50 dark:hover:bg-slate-800">Recent Posts</a>
+        <a href="#videoSection" class="block px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-100 hover:bg-brand-50 dark:hover:bg-slate-800">Video Tutorials</a>
+        <a href="Class_12th.html" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-brand-500 dark:text-brand-400 hover:bg-brand-50">Class 12 Portal</a>
+        <a href="Class_10th.html" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-brand-500 dark:text-brand-400 hover:bg-brand-50">Class 10 Portal</a>
+        <a href="https://ncerte-books.blogspot.com/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-brand-500 dark:text-brand-400 hover:bg-brand-50">NCERT Books</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow">
+    <section id="hero" class="relative overflow-hidden universe-bg py-12 md:py-20 border-b border-slate-800 text-white">
+      <!-- Ambient Background Glows -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-400/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Left Content -->
+          <div class="lg:col-span-7 text-center lg:text-left space-y-5">
+            <div class="inline-flex items-center gap-2 bg-brand-subdark/90 border border-brand-400/40 text-brand-400 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-sm">
+              <i class="fas fa-graduation-cap"></i> Complete Educational Resource Platform
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              CBSE &amp; BSEB Exams with <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-400 via-indigo-400 to-pink-400">Pratap Sanjay Sir</span>
+            </h1>
+
+            <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Educator (M.A. + B.Ed.), Author, CEH. Empowering students with exam-oriented, conceptual revision notes, chapter formulas, question banks, and live syllabus guides for <strong>Class 6th, 7th, 8th, 9th, 10th, 11th, &amp; 12th</strong>.
+            </p>
+
+            <!-- Search Bar with Live Filter -->
+            <div class="max-w-xl mx-auto lg:mx-0 pt-2">
+              <div class="relative flex items-center shadow-lg rounded-2xl overflow-hidden border border-slate-700 bg-[#083049]/90 glass-effect focus-within:ring-2 focus-within:ring-brand-400 transition">
+                <span class="pl-4 text-slate-400"><i class="fas fa-search"></i></span>
+                <input id="globalSearchInput" 
+                       type="text" 
+                       placeholder="Search subject, class (e.g. 'Class 10 Physics', 'Maths')..." 
+                       class="w-full py-3.5 px-3.5 text-sm bg-transparent text-slate-100 placeholder-slate-400 focus:outline-none">
+                <button id="clearSearchBtn" class="hidden pr-3 text-slate-400 hover:text-white transition">
+                  <i class="fas fa-times-circle"></i>
+                </button>
+                <a href="#classTabs" class="bg-brand-400 hover:bg-brand-500 text-white text-xs uppercase font-bold px-4 py-3.5 m-1 rounded-xl transition flex items-center gap-1.5 shrink-0">
+                  <span>Explore</span> <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-2 flex items-center justify-center lg:justify-start gap-2">
+                <span><i class="fas fa-bolt text-amber-400"></i> Popular:</span>
+                <button onclick="setSearchFilter('Physics')" class="underline hover:text-brand-400">Physics</button>
+                <button onclick="setSearchFilter('Mathematics')" class="underline hover:text-brand-400">Mathematics</button>
+                <button onclick="setSearchFilter('Class 10')" class="underline hover:text-brand-400">Class 10th</button>
+                <button onclick="setSearchFilter('Class 12')" class="underline hover:text-brand-400">Class 12th</button>
+              </p>
+            </div>
+
+            <!-- Quick Metrics / Badges -->
+            <div class="grid grid-cols-3 gap-3 pt-3 max-w-lg mx-auto lg:mx-0">
+              <div class="p-3 rounded-xl bg-brand-subdark/80 backdrop-blur border border-slate-800 text-center shadow-sm">
+                <span class="block text-xl font-bold text-brand-400">Class 6-12</span>
+                <span class="text-[11px] text-slate-400">CBSE &amp; BSEB</span>
+              </div>
+              <div class="p-3 rounded-xl bg-brand-subdark/80 backdrop-blur border border-slate-800 text-center shadow-sm">
+                <span class="block text-xl font-bold text-emerald-400">100% Free</span>
+                <span class="text-[11px] text-slate-400">Digital Notes</span>
+              </div>
+              <div class="p-3 rounded-xl bg-brand-subdark/80 backdrop-blur border border-slate-800 text-center shadow-sm">
+                <span class="block text-xl font-bold text-indigo-400">Exam Ready</span>
+                <span class="text-[11px] text-slate-400">Solved Papers</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Profile Card / Hero Graphic (Stable & Static Box) -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md">
+              <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-400 to-pink-500 rounded-3xl blur-md opacity-30"></div>
+              
+              <div class="relative bg-[#04253a]/95 glass-effect rounded-3xl shadow-xl p-6 border border-slate-700 text-center space-y-4">
+                <div class="relative inline-block mx-auto">
+                  <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden p-1.5 ring-4 ring-brand-400/50 bg-gradient-to-tr from-brand-400 to-indigo-500 mx-auto shadow-xl">
+                    <img src="Pratap Sanjay Kumar.png" 
+                         alt="Pratap Sanjay Sir" 
+                         class="w-full h-full object-cover rounded-full bg-white">
+                  </div>
+                  <span class="absolute bottom-1 right-2 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full border-2 border-slate-900 shadow">
+                    Verified
+                  </span>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-bold text-white">Pratap Sanjay Sir</h3>
+                  <p class="text-xs text-brand-400 font-medium">Educator (MA + B.Ed.) • Author • CEH</p>
+                </div>
+
+                <div class="bg-[#001a2b] p-3.5 rounded-2xl text-xs text-slate-300 leading-relaxed border border-slate-800">
+                  <i class="fas fa-quote-left text-brand-400 mr-1"></i>
+                  Simplifying complex science, mathematics &amp; humanities concepts into scoring notes for all school boards.
+                  <i class="fas fa-quote-right text-brand-400 ml-1"></i>
+                </div>
+
+                <!-- Channel Connection Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
+                  <a href="https://www.youtube.com/@pratapsanjaysir" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-red-600 hover:bg-red-700 text-white shadow-sm transition">
+                    <i class="fab fa-youtube"></i> Subscribe
+                  </a>
+                  <a href="https://t.me/pratapsanjaysir" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sky-500 hover:bg-sky-600 text-white shadow-sm transition">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                  </a>
+                  <a href="https://wa.me/917808343396" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="classTabs" class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-xs uppercase tracking-widest font-bold text-brand-400 bg-brand-50 dark:bg-brand-900/30 px-3 py-1 rounded-full border border-brand-400/20">
+          Structured Curriculum
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-2">
+          Select Your Class &amp; Subject
+        </h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+          Explore complete chapter notes, question banks, and formulas prepared for Classes 6 to 12.
+        </p>
+
+        <!-- Class Selector Pills Bar -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-6 p-1.5 bg-slate-200/70 dark:bg-[#04253a] rounded-2xl shadow-inner max-w-3xl mx-auto">
+          <button onclick="switchClassTab('all')" class="class-tab-btn active-tab px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all" data-class="all">
+            All Classes
+          </button>
+          <button onclick="switchClassTab('12th')" class="class-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all" data-class="12th">
+            Class 12th
+          </button>
+          <button onclick="switchClassTab('11th')" class="class-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all" data-class="11th">
+            Class 11th
+          </button>
+          <button onclick="switchClassTab('10th')" class="class-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all" data-class="10th">
+            Class 10th
+          </button>
+          <button onclick="switchClassTab('9th')" class="class-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all" data-class="9th">
+            Class 9th
+          </button>
+          <button onclick="switchClassTab('8th')" class="class-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all" data-class="8th">
+            Class 8th
+          </button>
+          <button onclick="switchClassTab('7th')" class="class-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all" data-class="7th">
+            Class 7th
+          </button>
+          <button onclick="switchClassTab('6th')" class="class-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all" data-class="6th">
+            Class 6th
+          </button>
+        </div>
+      </div>
+
+      <div id="classesContainer" class="space-y-12">
+
+        <!-- ================= CLASS 12th SECTION ================= -->
+        <div class="class-card-section" data-class="12th">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-6">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 font-bold flex items-center justify-center text-lg border border-purple-500/20">
+                12
+              </span>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Class 12th (Senior Secondary)</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">CBSE, Bihar Board (BSEB) &amp; Other State Boards</p>
+              </div>
+            </div>
+            <a href="Class_12th.html" target="_blank" class="text-xs font-semibold text-brand-400 hover:underline flex items-center gap-1">
+              Visit Portal <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- 12th Physics -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-atom"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">CBSE / BSEB</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Physics - I &amp; II</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Electrostatics, Optics, Magnetism, Modern Physics &amp; Formulas.</p>
+              <div class="flex items-center gap-2">
+                <a href="https://class12th-pratapsanjaysir.blogspot.com/search/label/Physics%20-%20I?&max-results=7" target="_blank" class="flex-1 text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                  <i class="fas fa-book-reader mr-1"></i> Open Notes
+                </a>
+                <button onclick="openPreviewModal('Class 12th Physics', 'Electrostatics, Current Electricity, Magnetic Effects, Optics, Dual Nature of Matter')" class="p-2 rounded-xl text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-400 transition" title="Preview Topics">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- 12th Chemistry -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-flask"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">Chemistry</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Chemistry - I &amp; II</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Organic synthesis, Electrochemistry, Solutions, Coordination compounds.</p>
+              <div class="flex items-center gap-2">
+                <a href="https://class12th-pratapsanjaysir.blogspot.com/search/label/Chemistry%20-%20I?&max-results=7" target="_blank" class="flex-1 text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                  <i class="fas fa-book-reader mr-1"></i> Open Notes
+                </a>
+                <button onclick="openPreviewModal('Class 12th Chemistry', 'Solutions, Electrochemistry, Chemical Kinetics, Coordination Compounds, Aldehydes & Ketones')" class="p-2 rounded-xl text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-400 transition">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- 12th Mathematics -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-square-root-variable"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">Maths</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Mathematics - I &amp; II</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Calculus, Matrices, Determinants, Vectors &amp; 3D Geometry solutions.</p>
+              <div class="flex items-center gap-2">
+                <a href="https://class12th-pratapsanjaysir.blogspot.com/search/label/Mathematics%20-%20I?&max-results=7" target="_blank" class="flex-1 text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                  <i class="fas fa-book-reader mr-1"></i> Open Notes
+                </a>
+                <button onclick="openPreviewModal('Class 12th Mathematics', 'Matrices, Determinants, Continuity & Differentiability, Integrals, Vectors & 3D Geometry')" class="p-2 rounded-xl text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-400 transition">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- 12th Biology -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-pink-500/10 text-pink-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-dna"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-pink-100 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300">Biology</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Biology - 12th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Genetics, Evolution, Biotechnology, Human Health &amp; Ecology.</p>
+              <div class="flex items-center gap-2">
+                <a href="https://class12th-pratapsanjaysir.blogspot.com/search/label/Biology%20-%2012th?&max-results=7" target="_blank" class="flex-1 text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                  <i class="fas fa-book-reader mr-1"></i> Open Notes
+                </a>
+                <button onclick="openPreviewModal('Class 12th Biology', 'Reproduction in Organisms, Genetics & Evolution, Biotechnology, Ecology & Environment')" class="p-2 rounded-xl text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-400 transition">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CLASS 11th SECTION ================= -->
+        <div class="class-card-section" data-class="11th">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-6">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-500 font-bold flex items-center justify-center text-lg border border-indigo-500/20">
+                11
+              </span>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Class 11th (Foundational College)</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">CBSE &amp; State Boards Core PCM &amp; PCB</p>
+              </div>
+            </div>
+            <a href="Class_11th.html" target="_blank" class="text-xs font-semibold text-brand-400 hover:underline flex items-center gap-1">
+              Visit Portal <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- 11th Physics -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-magnet"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">Physics</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Physics 11th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Kinematics, Laws of Motion, Thermodynamics, Gravitation &amp; Waves.</p>
+              <a href="https://class11th-pratapsanjaysir.blogspot.com/" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Class 11th Notes
+              </a>
+            </div>
+
+            <!-- 11th Chemistry -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-vial"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">Chemistry</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Chemistry 11th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Atomic structure, Chemical bonding, Thermodynamics &amp; Hydrocarbons.</p>
+              <a href="https://class11th-pratapsanjaysir.blogspot.com/" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Class 11th Notes
+              </a>
+            </div>
+
+            <!-- 11th Mathematics -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-calculator"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">Maths</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Mathematics 11th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Sets, Relations, Trigonometry, Complex Numbers &amp; Conic Sections.</p>
+              <a href="https://class11th-pratapsanjaysir.blogspot.com/" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Class 11th Notes
+              </a>
+            </div>
+
+            <!-- 11th Biology -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-microscope"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300">Biology</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Biology 11th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Cell biology, Plant physiology, Human physiology &amp; Living World.</p>
+              <a href="https://class11th-pratapsanjaysir.blogspot.com/" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Class 11th Notes
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CLASS 10th SECTION ================= -->
+        <div class="class-card-section" data-class="10th">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-6">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-brand-400/10 text-brand-500 font-bold flex items-center justify-center text-lg border border-brand-400/20">
+                10
+              </span>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Class 10th (Secondary Board Exams)</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">CBSE Board &amp; BSEB Matriculation Special Notes</p>
+              </div>
+            </div>
+            <a href="Class_10th.html" target="_blank" class="text-xs font-semibold text-brand-400 hover:underline flex items-center gap-1">
+              Visit Portal <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- 10th Mathematics -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-shapes"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300">Board Exam</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Mathematics 10th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Real numbers, Polynomials, Quadratic equations, Triangles, Trig &amp; Circles.</p>
+              <a href="https://class10th-pratapsanjaysir.blogspot.com/search/label/Mathematics?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Chapter Notes
+              </a>
+            </div>
+
+            <!-- 10th Physics -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">Physics</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Physics 10th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Light Reflection &amp; Refraction, Human Eye, Electricity, Magnetism.</p>
+              <a href="https://class10th-pratapsanjaysir.blogspot.com/search/label/Physics?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Chapter Notes
+              </a>
+            </div>
+
+            <!-- 10th Chemistry -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-fire-flame-curved"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">Chemistry</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Chemistry 10th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Chemical Reactions, Acids Bases Salts, Metals Non-Metals, Carbon.</p>
+              <a href="https://class10th-pratapsanjaysir.blogspot.com/search/label/Chemistry?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Chapter Notes
+              </a>
+            </div>
+
+            <!-- 10th Biology -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-leaf"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">Biology</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Biology 10th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Life Processes, Control and Coordination, Reproduction, Heredity.</p>
+              <a href="https://class10th-pratapsanjaysir.blogspot.com/search/label/Biology?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Chapter Notes
+              </a>
+            </div>
+
+            <!-- 10th Social Science -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-earth-americas"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">Social Sci</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Social Science 10th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">History (Nationalism), Geography (Resources), Civics &amp; Economics.</p>
+              <a href="https://class10th-pratapsanjaysir.blogspot.com/search/label/Social%20Science?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Chapter Notes
+              </a>
+            </div>
+
+            <!-- 10th Computer -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-cyan-100 text-cyan-700 dark:bg-cyan-900/40 dark:text-cyan-300">Computer / IT</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Computer 10th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">HTML, Cyber Ethics, Networking, Database concepts &amp; Coding basics.</p>
+              <a href="https://class10th-pratapsanjaysir.blogspot.com/search/label/Computer?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Chapter Notes
+              </a>
+            </div>
+
+            <!-- 10th Hindi -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-pen-nib"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300">Hindi</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">Hindi 10th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Kshitij, Kritika, Vyakaran, Essay writing and Board question answers.</p>
+              <a href="https://class10th-pratapsanjaysir.blogspot.com/search/label/Hindi?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Chapter Notes
+              </a>
+            </div>
+
+            <!-- 10th English -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-500 flex items-center justify-center text-lg">
+                  <i class="fas fa-book"></i>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300">English</span>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-brand-400 transition">English 10th</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">First Flight, Footprints Without Feet, Grammar &amp; Writing summary.</p>
+              <a href="https://class10th-pratapsanjaysir.blogspot.com/search/label/English?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                <i class="fas fa-book-reader mr-1"></i> Chapter Notes
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CLASS 9th SECTION ================= -->
+        <div class="class-card-section" data-class="9th">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-6">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-500 font-bold flex items-center justify-center text-lg border border-teal-500/20">
+                09
+              </span>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Class 9th (CBSE &amp; State Boards)</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Foundation for Higher Classes</p>
+              </div>
+            </div>
+            <a href="Class_9th.html" target="_blank" class="text-xs font-semibold text-brand-400 hover:underline flex items-center gap-1">
+              Visit Portal <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            <!-- 9th Maths -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-lg mb-3">
+                <i class="fas fa-square-root-alt"></i>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white">Mathematics</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Number Systems, Polynomials, Coordinate Geometry, Triangles.</p>
+              <a href="https://class9th-pratapsanjaysir.blogspot.com/search/label/Mathematics?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                Open Notes
+              </a>
+            </div>
+
+            <!-- 9th Physics -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-lg mb-3">
+                <i class="fas fa-gauge-high"></i>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white">Physics</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Motion, Force &amp; Laws of Motion, Gravitation, Work &amp; Energy.</p>
+              <a href="https://class9th-pratapsanjaysir.blogspot.com/search/label/Physics?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                Open Notes
+              </a>
+            </div>
+
+            <!-- 9th Chemistry -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg mb-3">
+                <i class="fas fa-vials"></i>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white">Chemistry</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Matter in Our Surroundings, Atoms &amp; Molecules, Structure of Atom.</p>
+              <a href="https://class9th-pratapsanjaysir.blogspot.com/search/label/Chemistry?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                Open Notes
+              </a>
+            </div>
+
+            <!-- 9th Biology -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+              <div class="w-10 h-10 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center text-lg mb-3">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white">Biology</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Fundamental Unit of Life (Cell), Tissues, Food Resources.</p>
+              <a href="https://class9th-pratapsanjaysir.blogspot.com/search/label/Biology?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                Open Notes
+              </a>
+            </div>
+
+            <!-- 9th Social Science -->
+            <div class="subject-box bg-white dark:bg-[#083049] rounded-2xl p-5 border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-lg mb-3">
+                <i class="fas fa-globe-asia"></i>
+              </div>
+              <h4 class="font-bold text-base text-slate-900 dark:text-white">Social Science</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">French Revolution, Physical Features of India, Democracy, Economics.</p>
+              <a href="https://class9th-pratapsanjaysir.blogspot.com/search/label/Social%20Science?&max-results=7" target="_blank" class="block text-center py-2 px-3 rounded-xl text-xs font-bold bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-brand-300 transition">
+                Open Notes
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CLASS 8th, 7th, 6th SECTIONS ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- CLASS 8th -->
+          <div class="class-card-section bg-white dark:bg-[#04253a] p-6 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-4" data-class="8th">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-brand-400/20 text-brand-500 font-bold flex items-center justify-center text-sm">8</span>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Class 8th</h3>
+              </div>
+              <a href="Class_8th.html" target="_blank" class="text-xs font-semibold text-brand-400 hover:underline">
+                Portal <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Essential Middle School Core subjects</p>
+
+            <div class="space-y-2.5">
+              <a href="https://class8th-pratapsanjaysir.blogspot.com/search/label/Math" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-calculator text-brand-400 mr-2"></i> Mathematics</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+              <a href="https://class8th-pratapsanjaysir.blogspot.com/search/label/Science" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-flask text-emerald-400 mr-2"></i> General Science</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+              <a href="https://class8th-pratapsanjaysir.blogspot.com/search/label/Social%20Science" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-landmark text-amber-400 mr-2"></i> Social Science</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+              <a href="https://class8th-pratapsanjaysir.blogspot.com/search/label/Computer" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-desktop text-purple-400 mr-2"></i> Computer Science</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- CLASS 7th -->
+          <div class="class-card-section bg-white dark:bg-[#04253a] p-6 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-4" data-class="7th">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-brand-400/20 text-brand-500 font-bold flex items-center justify-center text-sm">7</span>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Class 7th</h3>
+              </div>
+              <a href="Class_7th.html" target="_blank" class="text-xs font-semibold text-brand-400 hover:underline">
+                Portal <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Revision notes &amp; concept questions</p>
+
+            <div class="space-y-2.5">
+              <a href="https://class7th-pratapsanjaysir.blogspot.com/2024/06/revision-notes-class-7th.html#maths" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-divide text-brand-400 mr-2"></i> Mathematics</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+              <a href="https://class7th-pratapsanjaysir.blogspot.com/search/label/Science?&max-results=5" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-vial-circle-check text-emerald-400 mr-2"></i> Science</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+              <a href="https://class7th-pratapsanjaysir.blogspot.com/2024/06/revision-notes-class-7th.html#social-science" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-book-atlas text-amber-400 mr-2"></i> Social Science</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+              <a href="https://class7th-pratapsanjaysir.blogspot.com/search/label/computer?&max-results=5" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-microchip text-purple-400 mr-2"></i> Computer Skills</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- CLASS 6th -->
+          <div class="class-card-section bg-white dark:bg-[#04253a] p-6 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-4" data-class="6th">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-brand-400/20 text-brand-500 font-bold flex items-center justify-center text-sm">6</span>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Class 6th</h3>
+              </div>
+              <a href="Class_6th.html" target="_blank" class="text-xs font-semibold text-brand-400 hover:underline">
+                Portal <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Foundational concepts made simple</p>
+
+            <div class="space-y-2.5">
+              <a href="https://class6th-pratapsanjaysir.blogspot.com/2024/06/revision-notes-class-6th.html" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-shapes text-brand-400 mr-2"></i> Mathematics Revision</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+              <a href="https://class6th-pratapsanjaysir.blogspot.com/2024/06/revision-notes-class-6th.html" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-atom text-emerald-400 mr-2"></i> Science Fundamentals</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+              <a href="https://class6th-pratapsanjaysir.blogspot.com/" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-compass text-amber-400 mr-2"></i> Social Studies &amp; Maps</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+              <a href="https://ncerte-books.blogspot.com/" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#083049] hover:bg-brand-50 dark:hover:bg-slate-800 transition">
+                <span class="text-xs font-semibold"><i class="fas fa-book-open text-purple-400 mr-2"></i> NCERT E-Books</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="recentNotes" class="py-14 bg-slate-100/70 dark:bg-[#001726] border-y border-slate-200 dark:border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 gap-4">
+          <div>
+            <span class="text-xs uppercase tracking-widest font-bold text-brand-400">Updates &amp; Releases</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+              Latest Blog Posts &amp; Syllabi
+            </h2>
+          </div>
+          <a href="https://pratapsanjaysirpatna.blogspot.com/search" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-400 hover:text-brand-500 bg-white dark:bg-brand-subdark px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm transition">
+            View All Posts <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Card 1: Web Development Mastercourse -->
+          <article class="bg-white dark:bg-[#04253a] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
+            <div class="relative h-44 overflow-hidden group">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi15djbBQIETlWCjrRCthHxFWEoxs9SWAQQlqCbsmsMgxAQBcU-jGHBRj9IjFkBoiQND9JtStYv2g51mBBQNiCqxjGSMR3XE7Oy_t4ltyieXuzKpvy-595tUXPW-ZC1uhEfP8IVmH_eE8H2_G-QMwbtECR1pSluDks6zLT2t-0JdYnFmY2y4-ZjVyqlfjA3/s1600/Web%20Development%20%28Pratap%20Sanjay%20Sir%29.png" 
+                   alt="Web Development Mastercourse" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition duration-500 pointer-events-none"
+                   onerror="this.src='https://placehold.co/600x400/001a2b/598cff?text=Web+Development'">
+              <span class="absolute top-3 left-3 bg-brand-400 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow">
+                Coding
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <h3 class="font-bold text-sm text-slate-900 dark:text-white hover:text-brand-400 transition leading-snug">
+                  Complete Web Development Mastercourse
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                  Learn HTML, CSS, JavaScript and modern responsive design from scratch tailored for students.
+                </p>
+              </div>
+              <a href="https://pratapsanjaykumar.github.io/html_notes/" target="_blank" class="inline-flex items-center justify-between text-xs font-semibold text-brand-400 hover:text-brand-500 pt-2 border-t border-slate-100 dark:border-slate-800">
+                <span>Read Full Guide</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Complete Python Notes -->
+          <article class="bg-white dark:bg-[#04253a] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
+            <div class="relative h-44 overflow-hidden group">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUeUkZxfpjUmGUws_kOEsNimNNciFlJ71H2bA01DYqVXpK_4h2Aqr03Bw4rRhw9Hfm8kTQ_t-jyEohrSsMZw6B_1paf7R1yq73S2Y-pAiAroWMGH_rJjwp6QrG0gHob8__SQcxGyP7_d1my01Q0UZgOFFKbxOh4iGH6KM47qZ4W4ZuCbuLg8xIPQu2Mvs/s1600-rw/Python%20By%20Pratap%20Sanjay%20Sir.png" 
+                   alt="Python Complete Notes(Pratap Sanjay Sir)" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition duration-500 pointer-events-none"
+                   onerror="this.src='https://placehold.co/600x400/001a2b/598cff?text=Website+Links'">
+              <span class="absolute top-3 left-3 bg-indigo-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow">
+                Directory
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <h3 class="font-bold text-sm text-slate-900 dark:text-white hover:text-brand-400 transition leading-snug">
+                  Complete Python &amp; Code
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                Complete Python Notes from Beginner to Advanced — Learn Python concepts, syntax, examples, projects, and advanced techniques in a simple, step-by-step way.
+                </p>
+              </div>
+              <a href="https://github.com/pratapsanjaykumar/python_notes" target="_blank" class="inline-flex items-center justify-between text-xs font-semibold text-brand-400 hover:text-brand-500 pt-2 border-t border-slate-100 dark:border-slate-800">
+                <span>Access Links</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Class 12th Bihar Board -->
+          <article class="bg-white dark:bg-[#04253a] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
+            <div class="relative h-44 overflow-hidden group">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEVYuoGEPowJwrTkAIWtExxh9Y-XW7s_QY0U4VeL9UJ71Xe18GRA0HCsAAIy-GsezTHtNdxWjxQcF_zJzy-9CQUJlX4j9YoyrEObZDsEOULtld9NZZU-k2kmHaKST5_3JZNQ6-GoK5stHme1hBY2QVDEAeQIBmzsipd2qq_T4CwHYwK0FFUyAABN2InUcS/s1600/BSEB%20Class%2012%20Syllabus%20By%20Pratap%20Sanjay%20Sir.png" 
+                   alt="Class 12th Bihar Board" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition duration-500 pointer-events-none"
+                   onerror="this.src='https://placehold.co/600x400/001a2b/598cff?text=Class+12+BSEB'">
+              <span class="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow">
+                BSEB 12th
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+              <div>              
+                <h3 class="font-bold text-sm text-slate-900 dark:text-white hover:text-brand-400 transition leading-snug">
+                  Class -12th (Bihar Board I.Sc. Notes)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                  Complete BSEB Class 12 Intermediate Science syllabus, questions &amp; Hindi/English medium notes.
+                </p>
+              </div>
+              <a href="https://pratapsanjaysirpatna.blogspot.com/2024/12/class-12th-bihar-board.html" target="_blank" class="inline-flex items-center justify-between text-xs font-semibold text-brand-400 hover:text-brand-500 pt-2 border-t border-slate-100 dark:border-slate-800">
+                <span>View BSEB Notes</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Class 10th Bihar Board / CBSE -->
+          <article class="bg-white dark:bg-[#04253a] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
+            <div class="relative h-44 overflow-hidden group">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTwmvsX_eHSpXgJJ2_IBLM3Ou7klqMjcon2XC_OaGcw39dRQdjZhyphenhyphenm5HKbqk3TFqiWjXdBzNAm0xDEbcavxpZajIUfbJsGAsrKOwaEvAAr_7y0-oneb-fmhAfCNTPAXnsKN2KEEP2jqpVx-6YOuyFDu8a1HmH7RTAM5KXfcMJSeGLsHA15DTNFUvD6iwmw/s1600/BSEB%20By%20Pratap%20Sanjay%20Sir.png" 
+                   alt="Class 10th Bihar Board" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition duration-500 pointer-events-none"
+                   onerror="this.src='https://placehold.co/600x400/001a2b/598cff?text=Class+10+BSEB'">
+              <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow">
+                10th Board
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+              <div>               
+                <h3 class="font-bold text-sm text-slate-900 dark:text-white hover:text-brand-400 transition leading-snug">
+                  Class -10th (BSEB &amp; CBSE Board)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                  High-scoring matriculation notes for Mathematics, Science, Sanskrit, Hindi, Social Science.
+                </p>
+              </div>
+              <a href="https://pratapsanjaysirpatna.blogspot.com/2024/11/bihar-board-bseb.html" target="_blank" class="inline-flex items-center justify-between text-xs font-semibold text-brand-400 hover:text-brand-500 pt-2 border-t border-slate-100 dark:border-slate-800">
+                <span>Open Notes</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="videoSection" class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-brand-dark via-brand-subdark to-[#001422] text-white rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden border border-brand-400/20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-5 space-y-4">
+            <span class="bg-red-500/20 text-red-400 border border-red-500/30 px-3 py-1 rounded-full text-xs font-bold inline-flex items-center gap-1.5">
+              <i class="fab fa-youtube"></i> Video Lectures
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight leading-tight">
+              Watch Pratap Sanjay Sir&#39;s Concept
+            </h2>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Prefer visual explanations? Watch in-depth chapter breakdowns, mathematical proofs, and chemistry reactions on YouTube channel <strong>@AcademeX10th</strong>.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-3">
+              <a href="https://www.youtube.com/@AcademeX10th" target="_blank" rel="noopener" class="bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase px-5 py-3 rounded-xl shadow-lg transition flex items-center gap-2">
+                <i class="fab fa-youtube"></i> Watch on YouTube
+              </a>
+              <button onclick="toggleVideoPlayback()" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs px-4 py-3 rounded-xl transition flex items-center gap-2">
+                <i class="fas fa-play text-brand-400"></i> Play Lecture Here
+              </button>
+            </div>
+          </div>
+
+          <!-- Video Wrapper -->
+          <div class="lg:col-span-7">
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10 bg-black">
+              <iframe id="featuredPlayer"
+                      class="w-full h-full"
+                      src="https://www.youtube.com/embed/vUF90NsT7J0?enablejsapi=1" 
+                      title="Educational Masterclass by Pratap Sanjay Sir" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white dark:bg-[#001726] border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Partner Portals &amp; Student Ecosystem</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Direct access to allied educational hubs by Pratap Sanjay Sir</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <a href="https://class12th-pratapsanjaysir.blogspot.com/" target="_blank" class="p-4 rounded-2xl bg-slate-50 dark:bg-brand-subdark hover:bg-brand-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 text-center transition group">
+            <i class="fas fa-graduation-cap text-2xl text-purple-500 mb-2 group-hover:scale-110 transition-transform"></i>
+            <span class="block text-xs font-bold text-slate-800 dark:text-white">Class 12th</span>
+            <span class="text-[10px] text-slate-400">CBSE / BSEB</span>
+          </a>
+
+          <a href="https://class10th-pratapsanjaysir.blogspot.com/" target="_blank" class="p-4 rounded-2xl bg-slate-50 dark:bg-brand-subdark hover:bg-brand-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 text-center transition group">
+            <i class="fas fa-certificate text-2xl text-blue-500 mb-2 group-hover:scale-110 transition-transform"></i>
+            <span class="block text-xs font-bold text-slate-800 dark:text-white">Class 10th</span>
+            <span class="text-[10px] text-slate-400">Secondary Hub</span>
+          </a>
+
+          <a href="https://class9th-pratapsanjaysir.blogspot.com/" target="_blank" class="p-4 rounded-2xl bg-slate-50 dark:bg-brand-subdark hover:bg-brand-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 text-center transition group">
+            <i class="fas fa-book text-2xl text-emerald-500 mb-2 group-hover:scale-110 transition-transform"></i>
+            <span class="block text-xs font-bold text-slate-800 dark:text-white">Class 9th</span>
+            <span class="text-[10px] text-slate-400">Pre-Board Prep</span>
+          </a>
+
+          <a href="https://ncerte-books.blogspot.com/" target="_blank" class="p-4 rounded-2xl bg-slate-50 dark:bg-brand-subdark hover:bg-brand-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 text-center transition group">
+            <i class="fas fa-file-pdf text-2xl text-red-500 mb-2 group-hover:scale-110 transition-transform"></i>
+            <span class="block text-xs font-bold text-slate-800 dark:text-white">NCERT Books</span>
+            <span class="text-[10px] text-slate-400">PDF Downloads</span>
+          </a>
+
+          <a href="https://studentsmovie.blogspot.com/" target="_blank" class="p-4 rounded-2xl bg-slate-50 dark:bg-brand-subdark hover:bg-brand-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 text-center transition group">
+            <i class="fas fa-film text-2xl text-amber-500 mb-2 group-hover:scale-110 transition-transform"></i>
+            <span class="block text-xs font-bold text-slate-800 dark:text-white">Student Movies</span>
+            <span class="text-[10px] text-slate-400">Inspirational</span>
+          </a>
+
+          <a href="https://pcsoftware-students.blogspot.com/" target="_blank" class="p-4 rounded-2xl bg-slate-50 dark:bg-brand-subdark hover:bg-brand-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 text-center transition group">
+            <i class="fas fa-code text-2xl text-pink-500 mb-2 group-hover:scale-110 transition-transform"></i>
+            <span class="block text-xs font-bold text-slate-800 dark:text-white">PC Software</span>
+            <span class="text-[10px] text-slate-400">Tools &amp; Learning</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-dark text-white border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        
+        <!-- About Pratap Sanjay Sir -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl overflow-hidden ring-2 ring-brand-400/50">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAPnClv9xv_OCPYtcWC3Gisu1IUBC_3bAR86ix1MIc4CUuIagvDSJVu10XFqy_rc323Ui5MT6Hg0BYypMCtL6D2Y2hOjz-v4wAUh9RobPL13V9Pwo0g8gVQ0wDefIa95pnJCpxAsqFJ3rdbXy-RspHMLhyphenhyphenyCWqrr-l2Ku041_uwlvSx22XG5r1z9zIfcqD/s1600/android-chrome-192x192.png" 
+                   alt="Pratap Sanjay Sir" 
+                   class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="font-extrabold text-lg text-white block">CBSE Notes by Pratap Sanjay Sir</span>
+              <span class="text-xs text-brand-400 font-medium">Patna, Bihar, India</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Pratap Sanjay Sir pioneered a free online platform, providing students with invaluable educational resources. His dedication to accessible learning has empowered countless learners, fostering a brighter future for India&#39;s education.
+          </p>
+          <div class="flex space-x-3 text-base text-slate-300 pt-1">
+            <a href="https://wa.me/917808343396" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-emerald-600 flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@AcademeX10th" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-red-600 flex items-center justify-center transition"><i class="fab fa-youtube"></i></a>
+            <a href="https://t.me/pratapsanjaysir" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-sky-500 flex items-center justify-center transition"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/pratapsanjaysir/" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-pink-600 flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100028492753930" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-blue-600 flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://goo.gl/maps/3kobz6EohxEYS3659" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-red-500 flex items-center justify-center transition" title="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-brand-400">Class Quick Links</h4>
+          <ul class="text-xs space-y-2 text-slate-300">
+            <li><a href="Class_12th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 12th I.Sc.</a></li>
+            <li><a href="Class_11th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 11th Science</a></li>
+            <li><a href="Class_10th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 10th Board</a></li>
+            <li><a href="Class_9th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 9th Foundation</a></li>
+            <li><a href="Class_8th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 8th Notes</a></li>
+            <li><a href="Class_7th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 7th Notes</a></li>
+            <li><a href="Class_6th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 6th Notes</a></li>
+          </ul>
+        </div>
+
+        <!-- Official Pages & Legal -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-brand-400">Official Information</h4>
+          <ul class="text-xs space-y-2 text-slate-300">
+            <li><a href="https://pratapsanjaysirpatna.blogspot.com/2024/04/about-us.html" target="_blank" class="hover:text-brand-400 transition"><i class="far fa-id-badge mr-1.5 text-brand-400"></i> About Pratap Sanjay Sir</a></li>
+            <li><a href="https://pratapsanjaysirpatna.blogspot.com/2024/04/contact-us-your-tech-solutions-body.html" target="_blank" class="hover:text-brand-400 transition"><i class="far fa-envelope mr-1.5 text-brand-400"></i> Contact Us</a></li>
+            <li><a href="https://privacyterms.io/view/9kl2Z1F3-vOE2j9Lh-X2Ih9n/" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-user-shield mr-1.5 text-brand-400"></i> Privacy Policy</a></li>
+            <li><a href="https://privacyterms.io/view/kskWefIP-M0mtDtl5-Qy0kny/" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-file-contract mr-1.5 text-brand-400"></i> Terms &amp; Conditions</a></li>
+            <li><a href="https://bseb-pratapsanjaysir.blogspot.com/" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-graduation-cap mr-1.5 text-brand-400"></i> Bihar Board Special Section</a></li>
+          </ul>
+          <div class="pt-2">
+            <span class="text-[11px] text-slate-400 block">Stay updated directly via email channel</span>
+            <div class="flex mt-1.5">
+              <input type="email" id="newsletterEmail" placeholder="Enter student email..." class="px-3 py-2 bg-slate-800 text-xs text-white rounded-l-xl focus:outline-none border border-slate-700 w-full">
+              <button onclick="subscribeNewsletter()" class="bg-brand-400 hover:bg-brand-500 text-white text-xs px-3 py-2 rounded-r-xl font-bold transition">
+                Join
+              </button>
+            </div>
+            <p id="subscribeFeedback" class="text-[10px] text-emerald-400 mt-1 hidden">Subscribed successfully!</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Sub-Footer -->
+      <div class="border-t border-slate-800/80 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-3">
+        <p>
+          Designed with <i class="fa fa-heart text-red-500 mx-1"></i> for students by 
+          <a href="https://pratapsanjaysirpatna.blogspot.com/" class="text-brand-400 hover:underline">Pratap Sanjay Kumar</a>
+        </p>
+        <p>
+          Distributed by <a href="https://pratapsanjaysirpatna.blogspot.com/" class="text-[#0be6af] font-semibold hover:underline">Pratap Sanjay Sir</a> &copy; <span id="currentYear">2026</span>. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Preview Modal -->
+  <div id="previewModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 glass-effect hidden opacity-0 transition-opacity duration-300 px-4">
+    <div class="bg-white dark:bg-[#04253a] rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-700 transform scale-95 transition-transform duration-300" id="previewModalContent">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-brand-400/20 text-brand-500 flex items-center justify-center font-bold">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3 id="modalSubjectTitle" class="text-base font-bold text-slate-900 dark:text-white">Subject Overview</h3>
+        </div>
+        <button onclick="closePreviewModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg p-1">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="py-4 space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+        <p class="font-medium text-slate-800 dark:text-slate-200">Featured Topics &amp; Chapter Highlights:</p>
+        <div id="modalTopicsList" class="bg-slate-50 dark:bg-slate-900/60 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 leading-relaxed font-mono text-xs">
+          Loading topics...
+        </div>
+        <p class="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+          <i class="fas fa-check-circle text-emerald-500"></i> Includes NCERT Exemplar questions, formulas &amp; handwritten summary notes.
+        </p>
+      </div>
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-end gap-2">
+        <button onclick="closePreviewModal()" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition">
+          Close
+        </button>
+        <a id="modalDirectLink" href="https://pratapsanjaysirpatna.blogspot.com/" target="_blank" class="px-4 py-2 rounded-xl text-xs font-bold bg-brand-400 hover:bg-brand-500 text-white transition flex items-center gap-1.5">
+          <span>Go to Notes Page</span> <i class="fas fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Security Warning Notification Popup (Replacing alert) -->
+  <div id="securityWarningModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 glass-effect hidden transition-opacity duration-300 px-4">
+    <div class="bg-white dark:bg-[#04253a] rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-brand-400/40 text-center space-y-4">
+      <div class="w-14 h-14 bg-red-500/10 text-red-500 rounded-full flex items-center justify-center mx-auto text-2xl">
+        <i class="fas fa-shield-halved"></i>
+      </div>
+      <h3 class="text-lg font-bold text-slate-900 dark:text-white">Protected Content</h3>
+      <p id="securityWarningText" class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+        Right-click, text selection, copying, and source inspection (Ctrl+U / F12) are disabled on this portal to protect intellectual property.
+      </p>
+      <button onclick="closeSecurityWarning()" class="w-full py-2.5 rounded-xl bg-brand-400 hover:bg-brand-500 text-white font-bold text-xs uppercase tracking-wider transition">
+        I Understand
+      </button>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <button id="backToTopBtn" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 bg-brand-400 hover:bg-brand-500 text-white w-10 h-10 rounded-full shadow-xl flex items-center justify-center transition-all opacity-0 pointer-events-none transform translate-y-3" title="Back to Top">
+    <i class="fas fa-chevron-up text-sm"></i>
+  </button>
+
+  <script>
+    // Security Protection: Disable right-click context menu, copying, and Ctrl+U / F12 / Inspect
+    function showSecurityAlert(message) {
+      const modal = document.getElementById('securityWarningModal');
+      const textEl = document.getElementById('securityWarningText');
+      if (message) textEl.textContent = message;
+      modal.classList.remove('hidden');
+    }
+
+    function closeSecurityWarning() {
+      document.getElementById('securityWarningModal').classList.add('hidden');
+    }
+
+    // Disable Right-Click Context Menu
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      showSecurityAlert("Right-click context menu is disabled on this educational portal.");
+    });
+
+    // Disable Keyboard Shortcuts (Ctrl+U, Ctrl+C, Ctrl+Shift+I, F12, etc.)
+    document.addEventListener('keydown', function(e) {
+      // F12 key
+      if (e.key === 'F12') {
+        e.preventDefault();
+        showSecurityAlert("Developer tools (F12) are disabled on this page.");
+        return false;
+      }
+
+      // Ctrl+U (View Source)
+      if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+        e.preventDefault();
+        showSecurityAlert("Viewing source code (Ctrl+U) is restricted.");
+        return false;
+      }
+
+      // Ctrl+C or Ctrl+Insert (Copy)
+      if (e.ctrlKey && (e.key === 'c' || e.key === 'C')) {
+        e.preventDefault();
+        showSecurityAlert("Copying text or notes is restricted on this platform.");
+        return false;
+      }
+
+      // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C (Dev tools)
+      if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
+        e.preventDefault();
+        showSecurityAlert("Developer inspection tools are restricted.");
+        return false;
+      }
+
+      // Ctrl+S (Save Page)
+      if (e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+        e.preventDefault();
+        showSecurityAlert("Saving webpage content directly is disabled.");
+        return false;
+      }
+    });
+
+    // Disable Dragging images or text
+    document.addEventListener('dragstart', function(e) {
+      e.preventDefault();
+    });
+
+    // Theme Management (Light / Black mode)
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlEl = document.documentElement;
+
+    function applyTheme(isDark) {
+      if (isDark) {
+        htmlEl.classList.add('dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun', 'text-amber-400');
+        themeToggleBtn.title = 'Switch to Light Mode';
+      } else {
+        htmlEl.classList.remove('dark');
+        themeIcon.classList.remove('fa-sun', 'text-amber-400');
+        themeIcon.classList.add('fa-moon');
+        themeToggleBtn.title = 'Switch to Dark Mode';
+      }
+    }
+
+    // Default to dark mode for rich visual contrast, or detect local preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const currentTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'dark');
+    applyTheme(currentTheme === 'dark');
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isDarkNow = htmlEl.classList.contains('dark');
+      const newTheme = isDarkNow ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      applyTheme(!isDarkNow);
+    });
+
+    // Mobile Navigation Toggle
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileNavToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Class Tabs Switcher
+    function switchClassTab(selectedClass) {
+      const allSections = document.querySelectorAll('.class-card-section');
+      const allTabBtns = document.querySelectorAll('.class-tab-btn');
+
+      // Update button styling
+      allTabBtns.forEach(btn => {
+        if (btn.getAttribute('data-class') === selectedClass) {
+          btn.classList.add('bg-white', 'dark:bg-brand-500', 'text-brand-600', 'dark:text-white', 'shadow-md');
+          btn.classList.remove('text-slate-600', 'dark:text-slate-300');
+        } else {
+          btn.classList.remove('bg-white', 'dark:bg-brand-500', 'text-brand-600', 'dark:text-white', 'shadow-md');
+          btn.classList.add('text-slate-600', 'dark:text-slate-300');
+        }
+      });
+
+      // Filter visible sections
+      allSections.forEach(section => {
+        const secClass = section.getAttribute('data-class');
+        if (selectedClass === 'all' || secClass === selectedClass) {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
+    }
+
+    // Set initial tab styling
+    switchClassTab('all');
+
+    // Global Live Search Functionality
+    const globalSearchInput = document.getElementById('globalSearchInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+
+    function filterSubjects(keyword) {
+      const query = keyword.toLowerCase().trim();
+      const subjectBoxes = document.querySelectorAll('.subject-box');
+      const classSections = document.querySelectorAll('.class-card-section');
+
+      if (!query) {
+        clearSearchBtn.classList.add('hidden');
+        subjectBoxes.forEach(b => b.classList.remove('hidden'));
+        classSections.forEach(c => c.classList.remove('hidden'));
+        switchClassTab('all');
+        return;
+      }
+
+      clearSearchBtn.classList.remove('hidden');
+
+      // Check each section and box
+      classSections.forEach(section => {
+        let hasMatch = false;
+        const boxes = section.querySelectorAll('.subject-box');
+        const classHeading = section.textContent.toLowerCase();
+
+        if (classHeading.includes(query)) {
+          hasMatch = true;
+          boxes.forEach(b => b.classList.remove('hidden'));
+        } else {
+          boxes.forEach(box => {
+            const text = box.textContent.toLowerCase();
+            if (text.includes(query)) {
+              box.classList.remove('hidden');
+              hasMatch = true;
+            } else {
+              box.classList.add('hidden');
+            }
+          });
+        }
+
+        if (hasMatch) {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
+    }
+
+    globalSearchInput.addEventListener('input', (e) => {
+      filterSubjects(e.target.value);
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      globalSearchInput.value = '';
+      filterSubjects('');
+    });
+
+    function setSearchFilter(val) {
+      globalSearchInput.value = val;
+      filterSubjects(val);
+      const tabTarget = document.getElementById('classTabs');
+      if (tabTarget) tabTarget.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Modal Preview Handler
+    const previewModal = document.getElementById('previewModal');
+    const previewModalContent = document.getElementById('previewModalContent');
+    const modalSubjectTitle = document.getElementById('modalSubjectTitle');
+    const modalTopicsList = document.getElementById('modalTopicsList');
+    const modalDirectLink = document.getElementById('modalDirectLink');
+
+    function openPreviewModal(title, topics) {
+      modalSubjectTitle.textContent = title;
+      modalTopicsList.textContent = topics;
+      previewModal.classList.remove('hidden');
+      setTimeout(() => {
+        previewModal.classList.remove('opacity-0');
+        previewModalContent.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function closePreviewModal() {
+      previewModal.classList.add('opacity-0');
+      previewModalContent.classList.add('scale-95');
+      setTimeout(() => {
+        previewModal.classList.add('hidden');
+      }, 300);
+    }
+
+    previewModal.addEventListener('click', (e) => {
+      if (e.target === previewModal) closePreviewModal();
+    });
+
+    // YouTube Lecture Player Control
+    function toggleVideoPlayback() {
+      const player = document.getElementById('featuredPlayer');
+      if (player) {
+        player.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    // Simple Newsletter Action
+    function subscribeNewsletter() {
+      const email = document.getElementById('newsletterEmail').value.trim();
+      const feedback = document.getElementById('subscribeFeedback');
+      if (email && email.includes('@')) {
+        feedback.textContent = `Thank you! Notifications will be sent to ${email}`;
+        feedback.classList.remove('hidden');
+        document.getElementById('newsletterEmail').value = '';
+      } else {
+        feedback.textContent = 'Please enter a valid email address.';
+        feedback.classList.remove('hidden');
+        feedback.classList.replace('text-emerald-400', 'text-amber-400');
+      }
+    }
+
+    // Back to top scroll listener
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 350) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+      } else {
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Set Dynamic Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
