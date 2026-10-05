@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademeX Class 9th CBSE Foundation Portal | Pratap Sanjay Kumar</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(51, 65, 85, 0.6);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #14b8a6;
+            border-radius: 9999px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0d9488 0%, #0284c7 50%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- TOP ANNOUNCEMENT & SOCIAL BAR -->
+    <div class="bg-slate-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium">
+                <span class="bg-teal-500/20 text-teal-400 text-xs px-2 py-0.5 rounded-full border border-teal-500/30 flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span> Live Updates
+                </span>
+                <span class="hidden md:inline">CBSE Class 9th Foundation Preparation Hub &amp; Complete Notes</span>
+                <span class="md:hidden">CBSE Class 9th Hub</span>
+            </div>
+            
+            <div class="flex items-center space-x-3 text-slate-300">
+                <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp">
+                    <i class="fab fa-whatsapp text-sm sm:text-base"></i>
+                </a>
+                <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram">
+                    <i class="fab fa-telegram text-sm sm:text-base"></i>
+                </a>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube">
+                    <i class="fab fa-youtube text-sm sm:text-base"></i>
+                </a>
+                <button id="themeToggle" class="ml-2 p-1 text-slate-400 hover:text-amber-400 transition-colors" title="Toggle Theme">
+                    <i id="themeIcon" class="fas fa-sun text-xs sm:text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-teal-400 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                        AX
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
+                            Academe<span class="text-brand-500">X</span>
+                            <span class="bg-brand-100 text-brand-700 dark:bg-brand-900/50 dark:text-brand-300 text-[10px] font-bold px-2 py-0.5 rounded-md border border-brand-300 dark:border-brand-700">9th CBSE</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Mentored by Pratap Sanjay Kumar</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#home" class="text-brand-600 dark:text-brand-400 font-semibold">Home</a>
+                    <a href="#subjects" class="text-slate-600 dark:text-slate-300 hover:text-brand-500 transition-colors">Subjects</a>
+                    <a href="#lectures" class="text-slate-600 dark:text-slate-300 hover:text-brand-500 transition-colors">Video Lectures</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="flex items-center space-x-3">
+                    <a href="https://wa.me/917808343396" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-md shadow-emerald-600/20 transition-all hover:shadow-lg">
+                        <i class="fab fa-whatsapp text-sm"></i>
+                        <span>Ask Doubts</span>
+                    </a>
+                    
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-500">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
+            <a href="#home" class="block py-2 px-3 rounded-lg bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400">Home</a>
+            <a href="#subjects" class="block py-2 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Subjects</a>
+            <a href="#lectures" class="block py-2 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Video Lectures</a>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-around">
+                <a href="https://wa.me/917808343396" target="_blank" class="text-emerald-500 font-semibold text-xs flex items-center gap-1.5 py-1">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://t.me/pratapsanjaysir" target="_blank" class="text-sky-500 font-semibold text-xs flex items-center gap-1.5 py-1">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="text-red-500 font-semibold text-xs flex items-center gap-1.5 py-1">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 bg-gradient-to-b from-teal-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950">
+        <!-- Background decorative blur shapes -->
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-tr from-brand-400/20 to-teal-300/20 dark:from-brand-600/10 dark:to-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Hero Left: Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 dark:bg-brand-900/50 text-brand-700 dark:text-brand-300 text-xs font-semibold border border-brand-200 dark:border-brand-800 shadow-sm">
+                        <i class="fas fa-graduation-cap"></i> Complete CBSE Board Class 9th Syllabus &amp; Foundation
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        Build Strong Foundation <span class="gradient-text">in Class 9th</span> CBSE
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Access dedicated Class 9th chapter notes, NCERT step-by-step solutions, Science master portal, exam formula books, and concept mastery guided by mentor <strong class="text-slate-900 dark:text-white">Pratap Sanjay Kumar</strong>.
+                    </p>
+
+                    <!-- CTA Action Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+                        <a href="https://pratapsanjaykumar.github.io/science_9th/" target="_blank" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all flex items-center gap-2">
+                            <i class="fas fa-flask"></i> Open 9th Science Portal
+                        </a>
+                        <a href="#subjects" class="bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-md transition-all flex items-center gap-2">
+                            <i class="fas fa-layer-group"></i> View All Subjects
+                        </a>
+                    </div>
+
+                    <!-- Social Direct Buttons -->
+                    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+                        <span>Join Community Channels:</span>
+                        <a href="https://wa.me/917808343396" target="_blank" class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 hover:underline">
+                            <i class="fab fa-whatsapp text-base"></i> WhatsApp Group
+                        </a>
+                        <a href="https://t.me/pratapsanjaysir" target="_blank" class="flex items-center gap-1.5 text-sky-600 dark:text-sky-400 hover:underline">
+                            <i class="fab fa-telegram text-base"></i> Telegram Channel
+                        </a>
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="flex items-center gap-1.5 text-red-600 dark:text-red-400 hover:underline">
+                            <i class="fab fa-youtube text-base"></i> YouTube Channel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Mentor Profile Spotlight -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-sm rounded-3xl p-6 glass-card shadow-xl border border-slate-200 dark:border-slate-800 relative group">
+                        
+                        <div class="absolute -top-3 right-6 bg-gradient-to-r from-teal-500 to-emerald-500 text-white text-[10px] uppercase font-black px-3 py-1 rounded-full shadow-md">
+                            Head Mentor &amp; Director
+                        </div>
+
+                        <div class="text-center space-y-4 pt-2">
+                            <div class="relative w-32 h-32 mx-auto rounded-full p-1 bg-gradient-to-tr from-brand-500 via-teal-400 to-emerald-400 shadow-xl">
+                                <img src="Pratap Sanjay Kumar.png" 
+                                     alt="Pratap Sanjay Kumar" 
+                                     onerror="this.onerror=null; this.src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAPnClv9xv_OCPYtcWC3Gisu1IUBC_3bAR86ix1MIc4CUuIagvDSJVu10XFqy_rc323Ui5MT6Hg0BYypMCtL6D2Y2hOjz-v4wAUh9RobPL13V9Pwo0g8gVQ0wDefIa95pnJCpxAsqFJ3rdbXy-RspHMLhyphenhyphenyCWqrr-l2Ku041_uwlvSx22XG5r1z9zIfcqD/s1600/android-chrome-192x192.png';" 
+                                     class="w-full h-full object-cover rounded-full bg-slate-100 dark:bg-slate-800">
+                                <div class="absolute bottom-1 right-1 w-7 h-7 bg-emerald-500 border-2 border-white dark:border-slate-900 rounded-full flex items-center justify-center text-white text-xs" title="Verified Educator">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Pratap Sanjay Kumar</h3>
+                                <p class="text-xs text-brand-600 dark:text-brand-400 font-semibold mt-0.5">Senior CBSE Educator &amp; Mentor</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 px-2">
+                                    Building rock-solid concepts in Physics, Chemistry, Biology &amp; Mathematics for Class 9 students preparing for boards and competitive exams.
+                                </p>
+                            </div>
+
+                            <!-- Social Buttons Inside Mentor Card -->
+                            <div class="flex items-center justify-center space-x-3 pt-2">
+                                <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp">
+                                    <i class="fab fa-whatsapp text-sm sm:text-base"></i>
+                                </a>
+                                <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram">
+                                    <i class="fab fa-telegram text-sm sm:text-base"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube">
+                                    <i class="fab fa-youtube text-sm sm:text-base"></i>
+                                </a>
+                            </div>
+
+                            <!-- Highlights -->
+                            <div class="grid grid-cols-2 gap-2 text-left pt-2 border-t border-slate-200 dark:border-slate-800 text-xs">
+                                <div class="bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800">
+                                    <div class="font-bold text-slate-900 dark:text-white text-sm">10+ Years</div>
+                                    <div class="text-slate-500 text-[11px]">Teaching Exp.</div>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800">
+                                    <div class="font-bold text-slate-900 dark:text-white text-sm">Foundation</div>
+                                    <div class="text-slate-500 text-[11px]">Class 9 to 10 Bridge</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS COUNTER BAR -->
+    <section class="py-6 bg-brand-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">100%</div>
+                <div class="text-xs text-brand-100 font-medium uppercase tracking-wider">NCERT Class 9th Syllabus</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">300+</div>
+                <div class="text-xs text-brand-100 font-medium uppercase tracking-wider">Chapterwise Solved Examples</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">35,000+</div>
+                <div class="text-xs text-brand-100 font-medium uppercase tracking-wider">Class 9 Learners</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">24x7</div>
+                <div class="text-xs text-brand-100 font-medium uppercase tracking-wider">WhatsApp Doubt Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBJECTS SECTION WITH FULL LIGHT & DARK MODE SUPPORT -->
+    <section id="subjects" class="py-16 bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">Class 9 Curriculum</h2>
+                <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Choose Your Subject</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Access dedicated portals for comprehensive notes, formulas, chapter summaries, and revision guides for CBSE 9th.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Subject Card 1: Science -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 rounded-3xl relative shadow-md dark:shadow-xl hover:border-emerald-500/60 transition-all flex flex-col justify-between group ring-2 ring-emerald-500/20">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20">Dedicated Portal</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mt-5 mb-2">Science – Physics, Chem &amp; Bio</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Matter in Our Surroundings, Motion, Force &amp; Laws of Motion, Tissues, Cell, Gravitation &amp; Work-Energy.</p>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://pratapsanjaykumar.github.io/science_9th/" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-emerald-600/20">
+                            <i class="fas fa-external-link-alt"></i> Open Science Portal
+                        </a>
+                        <button onclick="openSubjectModal('Science')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 2: Mathematics -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 rounded-3xl relative shadow-md dark:shadow-xl hover:border-brand-500/60 transition-all flex flex-col justify-between group ring-2 ring-sky-500/20">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-300 border border-sky-200 dark:border-sky-500/20">Dedicated Portal</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mt-5 mb-2">Mathematics – 9th CBSE</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Number Systems, Polynomials, Coordinate Geometry, Linear Equations, Triangles, Quadrilaterals &amp; Heron's Formula.</p>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://pratapsanjaykumar.github.io/math_9th/" target="_blank" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-sky-600/20">
+                            <i class="fas fa-external-link-alt"></i> Open Maths Portal
+                        </a>
+                        <button onclick="openSubjectModal('Mathematics')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 3: Social Science -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 rounded-3xl relative shadow-md dark:shadow-xl hover:border-amber-500/60 transition-all flex flex-col justify-between group ring-2 ring-amber-500/20">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-globe-asia"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-300 border border-amber-200 dark:border-amber-500/20">Dedicated Portal</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mt-5 mb-2">Social Science – SST</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-6">French Revolution, Russian Revolution, India Size &amp; Location, Drainage, Constitutional Design, Economics.</p>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://pratapsanjaykumar.github.io/sst_9th/" target="_blank" class="flex-1 bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-amber-600/20">
+                            <i class="fas fa-external-link-alt"></i> Open SST Portal
+                        </a>
+                        <button onclick="openSubjectModal('Social Science')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 4: English -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 rounded-3xl relative shadow-md dark:shadow-xl hover:border-purple-500/60 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-300 border border-purple-200 dark:border-purple-500/20">English</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mt-5 mb-2">English – Beehive &amp; Moments</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Beehive prose &amp; poetry, Moments supplementary stories, descriptive paragraphs, story writing &amp; grammar rules.</p>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://pratapsanjaykumar.github.io/english_9th/" target="_blank" class="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-purple-600 dark:hover:bg-purple-600 text-purple-600 dark:text-purple-400 hover:text-white dark:hover:text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all">
+                            <i class="fas fa-external-link-alt"></i> Open English Portal
+                        </a>
+                        <button onclick="openSubjectModal('English')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 5: Hindi -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 rounded-3xl relative shadow-md dark:shadow-xl hover:border-rose-500/60 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-rose-50 dark:bg-rose-500/10 text-rose-600 dark:text-rose-300 border border-rose-200 dark:border-rose-500/20">Hindi</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mt-5 mb-2">Hindi – Kshitij &amp; Kritika</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Do Bailon Ki Katha, Lhasa Ki Aur, Kabir Ke Saakhi, Upsarg-Pratyay, Samas, Vakya Bhed &amp; Nibandh.</p>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://pratapsanjaykumar.github.io/hindi_9th/" target="_blank" class="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-rose-600 dark:hover:bg-rose-600 text-rose-600 dark:text-rose-400 hover:text-white dark:hover:text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all">
+                            <i class="fas fa-external-link-alt"></i> Open Hindi Portal
+                        </a>
+                        <button onclick="openSubjectModal('Hindi')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 6: Information Technology -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 rounded-3xl relative shadow-md dark:shadow-xl hover:border-teal-500/60 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-300 border border-teal-200 dark:border-teal-500/20">IT Code 402</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mt-5 mb-2">Information Tech – 402</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Introduction to IT-ITeS industry, Data entry &amp; keyboarding skills, Digital documentation, Spreadsheet &amp; Presentations.</p>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://pratapsanjaykumar.github.io/it_9th/" target="_blank" class="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-teal-600 dark:hover:bg-teal-600 text-teal-600 dark:text-teal-400 hover:text-white dark:hover:text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all">
+                            <i class="fas fa-external-link-alt"></i> Open IT Portal
+                        </a>
+                        <button onclick="openSubjectModal('IT Code 402')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO LECTURES SHOWCASE -->
+    <section id="lectures" class="py-16 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400">AcademeX YouTube Lectures</h2>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Learn From Pratap Sanjay Sir</h3>
+                </div>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shadow-md">
+                    <i class="fab fa-youtube text-sm"></i> Visit @AcademeX10th Channel
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Video Card 1 -->
+                <div class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="relative aspect-video bg-slate-800 flex items-center justify-center">
+                        <img src="https://placehold.co/600x337/0d9488/ffffff?text=Class+9th+Science+Physics" alt="Class 9 Science Physics" class="w-full h-full object-cover">
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-teal-500 bg-teal-50 dark:bg-teal-950/50 px-2 py-0.5 rounded">Science Physics</span>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2">Motion Full Chapter Explained in 1 Shot | Equations &amp; Graphs</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Velocity-time graph proofs, acceleration concepts and standard numericals.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="relative aspect-video bg-slate-800 flex items-center justify-center">
+                        <img src="https://placehold.co/600x337/0284c7/ffffff?text=Class+9th+Mathematics" alt="Class 9 Maths" class="w-full h-full object-cover">
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-sky-500 bg-sky-50 dark:bg-sky-950/50 px-2 py-0.5 rounded">Mathematics</span>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2">Number Systems Complete Revision | Real Numbers &amp; Surds</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Rational vs irrational numbers, decimal representation, and laws of exponents.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="relative aspect-video bg-slate-800 flex items-center justify-center">
+                        <img src="https://placehold.co/600x337/059669/ffffff?text=Class+9th+Chemistry" alt="Class 9 Chemistry" class="w-full h-full object-cover">
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded">Science Chemistry</span>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2">Matter in Our Surroundings &amp; Atoms/Molecules Breakdown</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">States of matter, latent heat, evaporation, and atomic mass calculations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="font-extrabold text-xl text-white flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white text-base">AX</div>
+                        AcademeX <span class="text-brand-400 text-sm">9th CBSE</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Dedicated academic portal for CBSE Class 9th students providing quality notes, NCERT solutions, practice material, and mentorship under Pratap Sanjay Kumar.
+                    </p>
+
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp"><i class="fab fa-whatsapp text-sm sm:text-base"></i></a>
+                        <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram"><i class="fab fa-telegram text-sm sm:text-base"></i></a>
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube"><i class="fab fa-youtube text-sm sm:text-base"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Academic Classes Navigation List (Exact requested links) -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Academic Classes</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_12th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 12th I.Sc.</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_11th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 11th Science</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_10th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 10th Board</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_9th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 9th Foundation</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_8th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 8th Notes</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_7th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 7th Notes</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_6th.html" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Class 6th Notes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Class 9 Quick Access</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="https://pratapsanjaykumar.github.io/science_9th/" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-flask mr-1.5 text-brand-400"></i> Class 9th Science Portal</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/math_9th/" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-calculator mr-1.5 text-brand-400"></i> Class 9th Mathematics Portal</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/sst_9th/" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-globe-asia mr-1.5 text-brand-400"></i> Class 9th Social Science Portal</a></li>
+                        <li><a href="https://ncerte-books.blogspot.com/" target="_blank" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Download NCERT Books</a></li>
+                        <li><a href="#lectures" class="hover:text-brand-400 transition"><i class="fas fa-angle-right mr-1.5 text-brand-400"></i> Video Lectures</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Mentor & Contact Card -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Director &amp; Mentor</h4>
+                    <div class="flex items-center gap-3">
+                        <img src="Pratap Sanjay Kumar.png" 
+                             alt="Pratap Sanjay Kumar" 
+                             onerror="this.onerror=null; this.src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAPnClv9xv_OCPYtcWC3Gisu1IUBC_3bAR86ix1MIc4CUuIagvDSJVu10XFqy_rc323Ui5MT6Hg0BYypMCtL6D2Y2hOjz-v4wAUh9RobPL13V9Pwo0g8gVQ0wDefIa95pnJCpxAsqFJ3rdbXy-RspHMLhyphenhyphenyCWqrr-l2Ku041_uwlvSx22XG5r1z9zIfcqD/s1600/android-chrome-192x192.png';" 
+                             class="w-12 h-12 rounded-full object-cover border border-brand-500">
+                        <div>
+                            <div class="text-sm font-bold text-white">Pratap Sanjay Kumar</div>
+                            <div class="text-[11px] text-brand-400">AcademeX Lead Mentor</div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 pt-1">Have a doubt in Class 9 Science or Maths? Connect directly on WhatsApp for personal mentorship.</p>
+                    <a href="https://wa.me/917808343396" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3.5 py-2 rounded-lg transition-colors">
+                        <i class="fab fa-whatsapp"></i> +91 7808343396
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-6 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+                <div>&copy; <span id="currentYear"></span> AcademeX Class 9th CBSE Portal. All rights reserved.</div>
+                <div>Designed for CBSE Class 9th Foundation Aspirants by Pratap Sanjay Kumar</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SUBJECT DETAILS MODAL -->
+    <div id="subjectModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-xl w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl relative space-y-4">
+            <button onclick="closeSubjectModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white p-2">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+            <div class="flex items-center gap-3">
+                <div id="modalSubjectIcon" class="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-900/60 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div>
+                    <h3 id="modalSubjectTitle" class="text-xl font-bold text-slate-900 dark:text-white">Subject Title</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Class 9 CBSE Chapters &amp; Study Outline</p>
+                </div>
+            </div>
+            
+            <div id="modalChapterList" class="space-y-2 max-h-64 overflow-y-auto custom-scrollbar pr-2 text-xs">
+                <!-- Chapters populated dynamically -->
+            </div>
+
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+                <div id="modalExtraLinkContainer">
+                    <a href="https://t.me/pratapsanjaysir" target="_blank" class="text-xs text-sky-500 hover:underline flex items-center gap-1">
+                        <i class="fab fa-telegram"></i> Request Chapter Notes
+                    </a>
+                </div>
+                <button onclick="closeSubjectModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-xl font-semibold text-xs">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Subject Chapters Breakdown for Class 9
+        const subjectChapters = {
+            "Science": [
+                "1. Matter in Our Surroundings", "2. Is Matter Around Us Pure?", "3. Atoms and Molecules",
+                "4. Structure of the Atom", "5. The Fundamental Unit of Life (Cell)", "6. Tissues",
+                "7. Motion", "8. Force and Laws of Motion", "9. Gravitation",
+                "10. Work and Energy", "11. Sound", "12. Improvement in Food Resources"
+            ],
+            "Mathematics": [
+                "1. Number Systems", "2. Polynomials", "3. Coordinate Geometry",
+                "4. Linear Equations in Two Variables", "5. Introduction to Euclid's Geometry", "6. Lines and Angles",
+                "7. Triangles", "8. Quadrilaterals", "9. Circles",
+                "10. Heron's Formula", "11. Surface Areas and Volumes", "12. Statistics"
+            ],
+            "Social Science": [
+                "History Ch 1: The French Revolution", "History Ch 2: Socialism in Europe and the Russian Revolution",
+                "History Ch 3: Nazism and the Rise of Hitler", "Geography Ch 1: India - Size and Location",
+                "Geography Ch 2: Physical Features of India", "Geography Ch 3: Drainage",
+                "Civics Ch 1: What is Democracy? Why Democracy?", "Civics Ch 2: Constitutional Design",
+                "Economics Ch 1: The Story of Village Palampur / People as Resource", "Economics Ch 2: Poverty as a Challenge"
+            ],
+            "English": [
+                "Beehive: The Fun They Had (Isaac Asimov)", "Beehive: The Sound of Music",
+                "Beehive: The Little Girl", "Beehive: A Truly Beautiful Mind",
+                "Beehive: The Snake and the Mirror", "Moments: The Lost Child (Mulk Raj Anand)",
+                "Moments: The Adventures of Toto (Ruskin Bond)", "Moments: Iswaran the Storyteller",
+                "Grammar: Tenses, Modals, Subject-Verb Concord, Determiners, Reported Speech"
+            ],
+            "Hindi": [
+                "Kshitij: Do Bailon Ki Katha (Premchand)", "Kshitij: Lhasa Ki Aur (Rahul Sankrityayan)",
+                "Kshitij: Upbhoktavad Ki Sanskriti", "Kshitij: Saakhiyan evam Sabad (Kabir)",
+                "Kritika: Is Jal Pralay Mein", "Kritika: Mere Sang Ki Auratein",
+                "Vyakaran: Upsarg, Pratyay, Samas, Arth Ki Drishti Se Vakya Bhed, Alankar"
+            ],
+            "IT Code 402": [
+                "Part A Unit 1: Communication Skills-I", "Part A Unit 2: Self-Management Skills-I",
+                "Part A Unit 3: ICT Skills-I", "Part A Unit 4: Entrepreneurial Skills-I",
+                "Part B Unit 1: Introduction to IT-ITeS Industry", "Part B Unit 2: Data Entry & Keyboarding Skills",
+                "Part B Unit 3: Digital Documentation (Word Processing)", "Part B Unit 4: Electronic Spreadsheet",
+                "Part B Unit 5: Digital Presentation"
+            ]
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic current year automatically
+            document.getElementById('currentYear').innerText = new Date().getFullYear();
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Dark theme toggle with dynamic icon logic
+            const themeBtn = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            if (themeBtn && themeIcon) {
+                themeBtn.addEventListener('click', () => {
+                    const isDark = document.documentElement.classList.toggle('dark');
+                    if (isDark) {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    } else {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                });
+            }
+        });
+
+        // Subject Modal
+        function openSubjectModal(subjectName) {
+            document.getElementById('modalSubjectTitle').innerText = subjectName;
+            const modalList = document.getElementById('modalChapterList');
+            const extraLinkContainer = document.getElementById('modalExtraLinkContainer');
+            modalList.innerHTML = '';
+
+            const subjectLinks = {
+                "Science": { url: "https://pratapsanjaykumar.github.io/science_9th/", label: "Open Science Portal" },
+                "Mathematics": { url: "https://pratapsanjaykumar.github.io/math_9th/", label: "Open Mathematics Portal" },
+                "Social Science": { url: "https://pratapsanjaykumar.github.io/sst_9th/", label: "Open Social Science Portal" },
+                "English": { url: "https://pratapsanjaykumar.github.io/english_9th/", label: "Open English Portal" },
+                "Hindi": { url: "https://pratapsanjaykumar.github.io/hindi_9th/", label: "Open Hindi Portal" },
+                "IT Code 402": { url: "https://pratapsanjaykumar.github.io/it_9th/", label: "Open IT Portal" }
+            };
+
+            const target = subjectLinks[subjectName];
+            if (target) {
+                extraLinkContainer.innerHTML = `
+                    <a href="${target.url}" target="_blank" class="text-xs text-brand-600 dark:text-brand-400 font-bold hover:underline flex items-center gap-1">
+                        <i class="fas fa-external-link-alt"></i> ${target.label}
+                    </a>
+                `;
+            } else {
+                extraLinkContainer.innerHTML = `
+                    <a href="https://t.me/pratapsanjaysir" target="_blank" class="text-xs text-sky-500 hover:underline flex items-center gap-1">
+                        <i class="fab fa-telegram"></i> Request Chapter Notes on Telegram
+                    </a>
+                `;
+            }
+
+            const list = subjectChapters[subjectName] || ["Chapter 1 Notes", "Chapter 2 Notes", "Formula & Solution Book"];
+
+            list.forEach(ch => {
+                const item = document.createElement('div');
+                item.className = "p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-center justify-between";
+                item.innerHTML = `
+                    <span class="font-medium text-slate-800 dark:text-slate-200"><i class="fas fa-file-pdf text-teal-500 mr-2"></i> ${ch}</span>
+                    <button onclick="downloadAlert('${ch}.pdf')" class="text-brand-600 dark:text-brand-400 font-bold hover:underline text-[11px]">Download</button>
+                `;
+                modalList.appendChild(item);
+            });
+
+            document.getElementById('subjectModal').classList.remove('hidden');
+        }
+
+        function closeSubjectModal() {
+            document.getElementById('subjectModal').classList.add('hidden');
+        }
+
+        // Custom download notification
+        function downloadAlert(filename) {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-5 right-5 z-50 bg-slate-900 text-white text-xs px-4 py-3 rounded-xl shadow-2xl border border-brand-500 flex items-center gap-2 animate-bounce";
+            toast.innerHTML = `<i class="fas fa-check-circle text-emerald-400"></i> Prepared <strong>${filename}</strong> for download via Telegram / WhatsApp!`;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
