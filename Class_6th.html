@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademeX Class 6th CBSE Portal | Pratap Sanjay Kumar</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(51, 65, 85, 0.6);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #f43f5e;
+            border-radius: 9999px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #e11d48 0%, #ea580c 50%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- TOP ANNOUNCEMENT & SOCIAL BAR -->
+    <div class="bg-slate-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium">
+                <span class="bg-rose-500/20 text-rose-400 text-xs px-2 py-0.5 rounded-full border border-rose-500/30 flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-rose-400 animate-ping"></span> Live Updates
+                </span>
+                <span class="hidden md:inline">CBSE Class 6th Junior Secondary Foundation &amp; Handwritten Notes Portal</span>
+                <span class="md:hidden">CBSE Class 6th Hub</span>
+            </div>
+            
+            <div class="flex items-center space-x-3 text-slate-300">
+                <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp">
+                    <i class="fab fa-whatsapp text-sm sm:text-base"></i>
+                </a>
+                <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram">
+                    <i class="fab fa-telegram text-sm sm:text-base"></i>
+                </a>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube">
+                    <i class="fab fa-youtube text-sm sm:text-base"></i>
+                </a>
+                <button id="themeToggle" class="ml-2 p-1 text-slate-400 hover:text-rose-400 transition-colors" title="Toggle Theme">
+                    <i id="themeIcon" class="fas fa-sun text-xs sm:text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Brand Logo -->
+                <a href="https://pratapsanjaykumar.github.io/homepage/" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 to-rose-400 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                        AX
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
+                            Academe<span class="text-rose-500">X</span>
+                            <span class="bg-rose-100 text-rose-800 dark:bg-rose-900/50 dark:text-rose-300 text-[10px] font-bold px-2 py-0.5 rounded-md border border-rose-300 dark:border-rose-700">6th CBSE</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Mentored by Pratap Sanjay Kumar</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#home" class="text-rose-600 dark:text-rose-400 font-semibold">Home</a>
+                    <a href="#subjects" class="text-slate-600 dark:text-slate-300 hover:text-rose-500 transition-colors">Subjects</a>
+                    <a href="#allClassesExplore" class="text-slate-600 dark:text-slate-300 hover:text-rose-500 transition-colors">All Classes</a>
+                    <a href="#lectures" class="text-slate-600 dark:text-slate-300 hover:text-rose-500 transition-colors">Video Lectures</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="flex items-center space-x-3">
+                    <a href="https://pratapsanjaykumar.github.io/homepage/" class="hidden sm:inline-flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 transition-all">
+                        <i class="fas fa-th-large text-rose-500"></i>
+                        <span>All Portals</span>
+                    </a>
+
+                    <a href="https://wa.me/917808343396" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-md shadow-emerald-600/20 transition-all hover:shadow-lg">
+                        <i class="fab fa-whatsapp text-sm"></i>
+                        <span>Ask Doubts</span>
+                    </a>
+                    
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-rose-500">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
+            <a href="#home" class="block py-2 px-3 rounded-lg bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400">Home</a>
+            <a href="#subjects" class="block py-2 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Subjects</a>
+            <a href="#allClassesExplore" class="block py-2 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">All Class Notes</a>
+            <a href="#lectures" class="block py-2 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Video Lectures</a>
+            <a href="https://pratapsanjaykumar.github.io/homepage/" class="block py-2 px-3 rounded-lg font-semibold text-rose-500 hover:bg-slate-100 dark:hover:bg-slate-800">Explore All Portals</a>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-around">
+                <a href="https://wa.me/917808343396" target="_blank" class="text-emerald-500 font-semibold text-xs flex items-center gap-1.5 py-1">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://t.me/pratapsanjaysir" target="_blank" class="text-sky-500 font-semibold text-xs flex items-center gap-1.5 py-1">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="text-red-500 font-semibold text-xs flex items-center gap-1.5 py-1">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 bg-gradient-to-b from-rose-50/70 via-white to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950">
+        <!-- Ambient decorative glow -->
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-tr from-rose-400/20 to-orange-300/20 dark:from-rose-600/10 dark:to-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Hero Left: Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-800 dark:text-rose-300 text-xs font-semibold border border-rose-200 dark:border-rose-800 shadow-sm">
+                        <i class="fas fa-graduation-cap"></i> Complete CBSE Board Class 6th Bridge Curriculum
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        Build Strong Foundation <span class="gradient-text">in Class 6th</span> CBSE
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Get direct access to chapter-wise handwritten notes, textbook solutions, core formula guides, and activity summaries for Science, Maths, Social Science, and Computer mentored by <strong class="text-slate-900 dark:text-white">Pratap Sanjay Kumar</strong>.
+                    </p>
+
+                    <!-- CTA Action Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+                        <a href="#subjects" class="bg-rose-600 hover:bg-rose-700 text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-rose-500/25 hover:shadow-rose-500/40 transition-all flex items-center gap-2">
+                            <i class="fas fa-book-open"></i> Choose Class 6 Subject
+                        </a>
+                        <a href="https://pratapsanjaykumar.github.io/homepage/" class="bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-md transition-all flex items-center gap-2">
+                            <i class="fas fa-layer-group"></i> Explore All Classes Notes
+                        </a>
+                    </div>
+
+                    <!-- Social Direct Buttons -->
+                    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+                        <span>Connect for Guidance:</span>
+                        <a href="https://wa.me/917808343396" target="_blank" class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 hover:underline">
+                            <i class="fab fa-whatsapp text-base"></i> WhatsApp Help
+                        </a>
+                        <a href="https://t.me/pratapsanjaysir" target="_blank" class="flex items-center gap-1.5 text-sky-600 dark:text-sky-400 hover:underline">
+                            <i class="fab fa-telegram text-base"></i> Telegram Channel
+                        </a>
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="flex items-center gap-1.5 text-red-600 dark:text-red-400 hover:underline">
+                            <i class="fab fa-youtube text-base"></i> YouTube Channel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Mentor Profile Spotlight -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-sm rounded-3xl p-6 glass-card shadow-xl border border-slate-200 dark:border-slate-800 relative group">
+                        
+                        <div class="absolute -top-3 right-6 bg-gradient-to-r from-rose-500 to-amber-500 text-white text-[10px] uppercase font-black px-3 py-1 rounded-full shadow-md">
+                            Head Mentor &amp; Director
+                        </div>
+
+                        <div class="text-center space-y-4 pt-2">
+                            <div class="relative w-32 h-32 mx-auto rounded-full p-1 bg-gradient-to-tr from-rose-500 via-pink-400 to-amber-400 shadow-xl">
+                                <img src="Pratap Sanjay Kumar.png" 
+                                     alt="Pratap Sanjay Kumar" 
+                                     onerror="this.onerror=null; this.src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAPnClv9xv_OCPYtcWC3Gisu1IUBC_3bAR86ix1MIc4CUuIagvDSJVu10XFqy_rc323Ui5MT6Hg0BYypMCtL6D2Y2hOjz-v4wAUh9RobPL13V9Pwo0g8gVQ0wDefIa95pnJCpxAsqFJ3rdbXy-RspHMLhyphenhyphenyCWqrr-l2Ku041_uwlvSx22XG5r1z9zIfcqD/s1600/android-chrome-192x192.png';" 
+                                     class="w-full h-full object-cover rounded-full bg-slate-100 dark:bg-slate-800">
+                                <div class="absolute bottom-1 right-1 w-7 h-7 bg-emerald-500 border-2 border-white dark:border-slate-900 rounded-full flex items-center justify-center text-white text-xs" title="Verified Educator">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Pratap Sanjay Kumar</h3>
+                                <p class="text-xs text-rose-600 dark:text-rose-400 font-semibold mt-0.5">Senior CBSE Educator &amp; Mentor</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 px-2">
+                                    Helping primary-to-middle school students build strong conceptual clarity and scientific curiosity right from Class 6th.
+                                </p>
+                            </div>
+
+                            <!-- Social Buttons Inside Mentor Card -->
+                            <div class="flex items-center justify-center space-x-3 pt-2">
+                                <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp">
+                                    <i class="fab fa-whatsapp text-sm sm:text-base"></i>
+                                </a>
+                                <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram">
+                                    <i class="fab fa-telegram text-sm sm:text-base"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube">
+                                    <i class="fab fa-youtube text-sm sm:text-base"></i>
+                                </a>
+                            </div>
+
+                            <!-- Highlights -->
+                            <div class="grid grid-cols-2 gap-2 text-left pt-2 border-t border-slate-200 dark:border-slate-800 text-xs">
+                                <div class="bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800">
+                                    <div class="font-bold text-slate-900 dark:text-white text-sm">Class 6th</div>
+                                    <div class="text-slate-500 text-[11px]">Bridge Foundation</div>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800">
+                                    <div class="font-bold text-slate-900 dark:text-white text-sm">100% Free</div>
+                                    <div class="text-slate-500 text-[11px]">Digital Access</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS COUNTER BAR -->
+    <section class="py-6 bg-rose-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">100%</div>
+                <div class="text-xs text-rose-100 font-medium uppercase tracking-wider">NCERT Class 6th Syllabus</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">Physics • Chem • Bio</div>
+                <div class="text-xs text-rose-100 font-medium uppercase tracking-wider">Dedicated Science Branches</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">20,000+</div>
+                <div class="text-xs text-rose-100 font-medium uppercase tracking-wider">Junior Secondary Students</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">24x7</div>
+                <div class="text-xs text-rose-100 font-medium uppercase tracking-wider">Direct WhatsApp Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBJECTS SECTION -->
+    <section id="subjects" class="py-16 bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400 mb-2">Class 6th Subjects</h2>
+                <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Choose Your Learning Subject</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Access comprehensive chapter notes, textbook solutions, formulas, and branch-specific subtopic links.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Subject Card 1: Science (With Physics, Chemistry, Biology Subtopics) -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 rounded-3xl relative shadow-md dark:shadow-xl hover:border-emerald-500/60 transition-all flex flex-col justify-between group ring-2 ring-emerald-500/20">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20">Core Subject + 3 Branches</span>
+                        </div>
+                        <h4 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-5 mb-2">Science – Class 6th</h4>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                            Complete chapter solutions, scientific laws, concepts, and diagrams covering Physics, Chemistry, and Biology fundamentals for Class 6.
+                        </p>
+
+                        <!-- Science Subtopics -->
+                        <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 block mb-2.5">
+                                <i class="fas fa-network-wired text-emerald-500 mr-1"></i> Direct Science Branches:
+                            </span>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                                <!-- Physics -->
+                                <a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/Physics" target="_blank" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 border border-slate-200 dark:border-slate-700/80 transition flex items-center justify-between group/sub">
+                                    <div class="flex items-center gap-2">
+                                        <i class="fas fa-bolt text-blue-500 text-xs"></i>
+                                        <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 group-hover/sub:text-emerald-600 dark:group-hover/sub:text-emerald-400">Physics</span>
+                                    </div>
+                                    <i class="fas fa-arrow-right text-[10px] text-slate-400 group-hover/sub:translate-x-0.5 transition-transform"></i>
+                                </a>
+
+                                <!-- Chemistry -->
+                                <a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/chemistry" target="_blank" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 border border-slate-200 dark:border-slate-700/80 transition flex items-center justify-between group/sub">
+                                    <div class="flex items-center gap-2">
+                                        <i class="fas fa-vial text-emerald-500 text-xs"></i>
+                                        <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 group-hover/sub:text-emerald-600 dark:group-hover/sub:text-emerald-400">Chemistry</span>
+                                    </div>
+                                    <i class="fas fa-arrow-right text-[10px] text-slate-400 group-hover/sub:translate-x-0.5 transition-transform"></i>
+                                </a>
+
+                                <!-- Biology -->
+                                <a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/Science" target="_blank" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 border border-slate-200 dark:border-slate-700/80 transition flex items-center justify-between group/sub">
+                                    <div class="flex items-center gap-2">
+                                        <i class="fas fa-dna text-pink-500 text-xs"></i>
+                                        <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 group-hover/sub:text-emerald-600 dark:group-hover/sub:text-emerald-400">Biology</span>
+                                    </div>
+                                    <i class="fas fa-arrow-right text-[10px] text-slate-400 group-hover/sub:translate-x-0.5 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 pt-5 mt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/Science" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-emerald-600/20">
+                            <i class="fas fa-external-link-alt"></i> Open Complete Science Notes
+                        </a>
+                        <button onclick="openSubjectModal('Science')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 2: Mathematics -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 rounded-3xl relative shadow-md dark:shadow-xl hover:border-sky-500/60 transition-all flex flex-col justify-between group ring-2 ring-sky-500/20">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-300 border border-sky-200 dark:border-sky-500/20">Mathematics Portal</span>
+                        </div>
+                        <h4 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-5 mb-2">Mathematics – Class 6th</h4>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                            Knowing our numbers, Whole numbers, Playing with numbers, Basic geometrical ideas, Integers, Fractions, Decimals, Data handling, and Mensuration.
+                        </p>
+                        
+                        <div class="p-3 rounded-2xl bg-sky-50/60 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/40 text-xs text-sky-800 dark:text-sky-300 mt-2">
+                            <i class="fas fa-check-circle text-sky-500 mr-1.5"></i> Includes NCERT chapter solutions, formula sheets, and step-by-step methods.
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 pt-5 mt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/Math" target="_blank" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-sky-600/20">
+                            <i class="fas fa-external-link-alt"></i> Open Maths Notes
+                        </a>
+                        <button onclick="openSubjectModal('Mathematics')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 3: Social Science -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 rounded-3xl relative shadow-md dark:shadow-xl hover:border-amber-500/60 transition-all flex flex-col justify-between group ring-2 ring-amber-500/20">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-globe-asia"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-300 border border-amber-200 dark:border-amber-500/20">Social Science Portal</span>
+                        </div>
+                        <h4 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-5 mb-2">Social Science – Class 6th</h4>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                            History (Our Pasts - I), Geography (The Earth: Our Habitat), and Civics (Social and Political Life - I) with question answers, timeline charts, and maps.
+                        </p>
+
+                        <div class="p-3 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-100 dark:border-amber-900/40 text-xs text-amber-800 dark:text-amber-300 mt-2">
+                            <i class="fas fa-check-circle text-amber-500 mr-1.5"></i> Comprehensive questions, key terms, timelines, and map pointing basics.
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 pt-5 mt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/Social%20Science" target="_blank" class="flex-1 bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-amber-600/20">
+                            <i class="fas fa-external-link-alt"></i> Open SST Notes
+                        </a>
+                        <button onclick="openSubjectModal('Social Science')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subject Card 4: Computer Science -->
+                <div class="bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 rounded-3xl relative shadow-md dark:shadow-xl hover:border-purple-500/60 transition-all flex flex-col justify-between group ring-2 ring-purple-500/20">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-300 border border-purple-200 dark:border-purple-500/20">Computer Portal</span>
+                        </div>
+                        <h4 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-5 mb-2">Computer Science – Class 6th</h4>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                            Fundamentals of computers, Operating systems, MS Word formatting, PowerPoint presentations, Introduction to Scratch programming, and Internet basics.
+                        </p>
+
+                        <div class="p-3 rounded-2xl bg-purple-50/60 dark:bg-purple-950/30 border border-purple-100 dark:border-purple-900/40 text-xs text-purple-800 dark:text-purple-300 mt-2">
+                            <i class="fas fa-check-circle text-purple-500 mr-1.5"></i> Practical computer guides, shortcut keys, and foundational coding exercises.
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 pt-5 mt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/computer" target="_blank" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-purple-600/20">
+                            <i class="fas fa-external-link-alt"></i> Open Computer Notes
+                        </a>
+                        <button onclick="openSubjectModal('Computer Science')" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shrink-0" title="Quick Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED EXPLORE ALL CLASS NOTES BOX -->
+    <section id="allClassesExplore" class="py-12 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 rounded-3xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-6">
+                <!-- Decorative background elements -->
+                <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="space-y-2 text-center lg:text-left z-10">
+                    <span class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-rose-50">
+                        <i class="fas fa-compass"></i> Complete Educational Ecosystem
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                        Explore All Class Notes (Classes 6th to 12th)
+                    </h3>
+                    <p class="text-xs sm:text-sm text-rose-100 max-w-2xl leading-relaxed">
+                        Access dedicated portals for Class 6th, 7th, 8th, 9th, 10th, 11th, and 12th along with NCERT books, question banks, and competitive guides from Pratap Sanjay Sir.
+                    </p>
+                </div>
+
+                <div class="z-10 shrink-0 w-full lg:w-auto text-center">
+                    <a href="https://pratapsanjaykumar.github.io/homepage/" class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-100 text-slate-900 font-extrabold text-sm px-7 py-4 rounded-2xl shadow-xl transition-all transform hover:scale-105 active:scale-95 w-full sm:w-auto">
+                        <i class="fas fa-graduation-cap text-rose-600 text-lg"></i>
+                        <span>Explore All Class Notes Portal</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO LECTURES SHOWCASE -->
+    <section id="lectures" class="py-16 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400">AcademeX YouTube Lectures</h2>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Learn From Pratap Sanjay Sir</h3>
+                </div>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shadow-md">
+                    <i class="fab fa-youtube text-sm"></i> Visit @AcademeX10th Channel
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Video Card 1 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="relative aspect-video bg-slate-800 flex items-center justify-center">
+                        <img src="https://placehold.co/600x337/e11d48/ffffff?text=Class+6th+Science" alt="Class 6 Science" class="w-full h-full object-cover">
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-rose-500 bg-rose-50 dark:bg-rose-950/50 px-2 py-0.5 rounded">Science Curiosity</span>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2">Components of Food &amp; Getting to Know Plants</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Balanced diet, nutrients, plant parts, and simple experiments.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="relative aspect-video bg-slate-800 flex items-center justify-center">
+                        <img src="https://placehold.co/600x337/0284c7/ffffff?text=Class+6th+Mathematics" alt="Class 6 Maths" class="w-full h-full object-cover">
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-sky-500 bg-sky-50 dark:bg-sky-950/50 px-2 py-0.5 rounded">Mathematics</span>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2">Knowing Our Numbers &amp; Basic Geometry Simplified</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Place values, roman numerals, points, lines, angles, and shapes.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="relative aspect-video bg-slate-800 flex items-center justify-center">
+                        <img src="https://placehold.co/600x337/059669/ffffff?text=Class+6th+Social+Science" alt="Class 6 SST" class="w-full h-full object-cover">
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded">Social Science</span>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2">The Earth in the Solar System &amp; Our Pasts Stories</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Planets, motions of earth, hunter-gatherers, and earliest cities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="font-extrabold text-xl text-white flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-rose-500 flex items-center justify-center text-white text-base">AX</div>
+                        AcademeX <span class="text-rose-400 text-sm">6th CBSE</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Dedicated academic portal for CBSE Class 6th students providing quality notes, NCERT solutions, branch-wise Science topics, and mentorship under Pratap Sanjay Kumar.
+                    </p>
+
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp"><i class="fab fa-whatsapp text-sm sm:text-base"></i></a>
+                        <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram"><i class="fab fa-telegram text-sm sm:text-base"></i></a>
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube"><i class="fab fa-youtube text-sm sm:text-base"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Academic Classes Navigation List -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Academic Classes</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_12th.html" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-angle-right mr-1.5 text-rose-400"></i> Class 12th I.Sc.</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_11th.html" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-angle-right mr-1.5 text-rose-400"></i> Class 11th Science</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_10th.html" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-angle-right mr-1.5 text-rose-400"></i> Class 10th Board</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_9th.html" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-angle-right mr-1.5 text-rose-400"></i> Class 9th Foundation</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_8th.html" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-angle-right mr-1.5 text-rose-400"></i> Class 8th Notes</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_7th.html" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-angle-right mr-1.5 text-rose-400"></i> Class 7th Notes</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_6th.html" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-angle-right mr-1.5 text-rose-400"></i> Class 6th Notes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Class 6 Quick Access</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/Science" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-flask mr-1.5 text-rose-400"></i> Class 6th Science Notes</a></li>
+                        <li><a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/Physics" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-bolt mr-1.5 text-rose-400"></i> Class 6th Physics</a></li>
+                        <li><a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/chemistry" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-vial mr-1.5 text-rose-400"></i> Class 6th Chemistry</a></li>
+                        <li><a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/Math" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-calculator mr-1.5 text-rose-400"></i> Class 6th Mathematics</a></li>
+                        <li><a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/Social%20Science" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-globe-asia mr-1.5 text-rose-400"></i> Class 6th Social Science</a></li>
+                        <li><a href="https://class6th-pratapsanjaysir.blogspot.com/search/label/computer" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-desktop mr-1.5 text-rose-400"></i> Class 6th Computer</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/" target="_blank" class="hover:text-rose-400 transition"><i class="fas fa-th-large mr-1.5 text-rose-400"></i> All Class Notes Hub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Mentor & Contact Card -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Director &amp; Mentor</h4>
+                    <div class="flex items-center gap-3">
+                        <img src="Pratap Sanjay Kumar.png" 
+                             alt="Pratap Sanjay Kumar" 
+                             onerror="this.onerror=null; this.src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAPnClv9xv_OCPYtcWC3Gisu1IUBC_3bAR86ix1MIc4CUuIagvDSJVu10XFqy_rc323Ui5MT6Hg0BYypMCtL6D2Y2hOjz-v4wAUh9RobPL13V9Pwo0g8gVQ0wDefIa95pnJCpxAsqFJ3rdbXy-RspHMLhyphenhyphenyCWqrr-l2Ku041_uwlvSx22XG5r1z9zIfcqD/s1600/android-chrome-192x192.png';" 
+                             class="w-12 h-12 rounded-full object-cover border border-rose-500">
+                        <div>
+                            <div class="text-sm font-bold text-white">Pratap Sanjay Kumar</div>
+                            <div class="text-[11px] text-rose-400">AcademeX Lead Mentor</div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 pt-1">Have a doubt in Class 6 Science, Maths, or SST? Connect directly on WhatsApp for personal mentorship.</p>
+                    <a href="https://wa.me/917808343396" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3.5 py-2 rounded-lg transition-colors">
+                        <i class="fab fa-whatsapp"></i> +91 7808343396
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-6 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+                <div>&copy; <span id="currentYear"></span> AcademeX Class 6th CBSE Portal. All rights reserved.</div>
+                <div>Designed for CBSE Class 6th Junior Secondary Learners by Pratap Sanjay Kumar</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SUBJECT DETAILS PREVIEW MODAL -->
+    <div id="subjectModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-xl w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl relative space-y-4">
+            <button onclick="closeSubjectModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white p-2">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+            <div class="flex items-center gap-3">
+                <div id="modalSubjectIcon" class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-900/60 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div>
+                    <h3 id="modalSubjectTitle" class="text-xl font-bold text-slate-900 dark:text-white">Subject Title</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Class 6 CBSE Chapters &amp; Topic Highlights</p>
+                </div>
+            </div>
+            
+            <div id="modalChapterList" class="space-y-2 max-h-64 overflow-y-auto custom-scrollbar pr-2 text-xs">
+                <!-- Chapters populated dynamically -->
+            </div>
+
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+                <div id="modalExtraLinkContainer">
+                    <!-- Dynamic link populated via JS -->
+                </div>
+                <button onclick="closeSubjectModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-xl font-semibold text-xs">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Subject Chapters Breakdown for Class 6
+        const subjectChapters = {
+            "Science": [
+                "1. Components of Food (Carbohydrates, Fats, Proteins, Vitamins)",
+                "2. Sorting Materials into Groups (Properties of Materials)",
+                "3. Separation of Substances (Handpicking, Threshing, Winnowing, Filtration)",
+                "4. Getting to Know Plants (Herbs, Shrubs, Trees, Leaf Venation, Flowers)",
+                "5. Body Movements (Bones, Joints, Cartilage, Gait of Animals)",
+                "6. The Living Organisms — Characteristics and Habitats",
+                "7. Motion and Measurement of Distances (Physics - Standard Units, Motion Types)",
+                "8. Light, Shadows and Reflections (Physics - Pinhole Camera, Mirrors)",
+                "9. Electricity and Circuits (Physics - Electric Cell, Switch, Conductors)",
+                "10. Fun with Magnets (Physics - Magnetic Poles, Compass, Attraction & Repulsion)",
+                "11. Air Around Us (Atmosphere, Oxygen, Nitrogen, Smoke)"
+            ],
+            "Mathematics": [
+                "1. Knowing Our Numbers (Large numbers, Estimation, Roman numerals)",
+                "2. Whole Numbers (Number line, Predecessor, Successor, Properties)",
+                "3. Playing with Numbers (Factors, Multiples, Prime, Composite, HCF & LCM)",
+                "4. Basic Geometrical Ideas (Points, Lines, Rays, Angles, Polygons, Circles)",
+                "5. Understanding Elementary Shapes (Angles, Triangles, Quadrilaterals, 3D Shapes)",
+                "6. Integers (Positive & Negative numbers, Addition & Subtraction on number line)",
+                "7. Fractions (Proper, Improper, Mixed fractions, Equivalent fractions)",
+                "8. Decimals (Tenths, Hundredths, Money, Length, Weight conversions)",
+                "9. Data Handling (Tally marks, Pictographs, Bar graphs)",
+                "10. Mensuration (Perimeter and Area of rectangles & squares)",
+                "11. Algebra (Variables, Algebraic expressions, Equations)",
+                "12. Ratio and Proportion (Simplest form, Unitary method)"
+            ],
+            "Social Science": [
+                "History Ch 1: What, Where, How and When?",
+                "History Ch 2: From Hunting-Gathering to Growing Food",
+                "History Ch 3: In the Earliest Cities (Harappan civilization)",
+                "History Ch 4: What Books and Burials Tell Us",
+                "History Ch 5: Kingdoms, Kings and an Early Republic",
+                "Geography Ch 1: The Earth in the Solar System",
+                "Geography Ch 2: Globe: Latitudes and Longitudes",
+                "Geography Ch 3: Motions of the Earth (Rotation & Revolution)",
+                "Geography Ch 4: Maps (Types, Distance, Direction, Symbols)",
+                "Geography Ch 5: Major Domains of the Earth",
+                "Civics Ch 1: Understanding Diversity",
+                "Civics Ch 2: Diversity and Discrimination",
+                "Civics Ch 3: What is Government?",
+                "Civics Ch 4: Panchayati Raj & Rural Administration"
+            ],
+            "Computer Science": [
+                "1. Computer System & Peripheral Devices",
+                "2. Exploring Windows Operating System & File Management",
+                "3. Formatting & Styles in MS Word",
+                "4. Creating Multimedia Presentations in MS PowerPoint",
+                "5. Introduction to Scratch / Visual Block Coding",
+                "6. Safe Internet Browsing, Search Engines & Cyber Etiquette",
+                "7. Basic Computational Thinking & Algorithm Logic"
+            ]
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic current year
+            document.getElementById('currentYear').innerText = new Date().getFullYear();
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Dark theme toggle logic
+            const themeBtn = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            if (themeBtn && themeIcon) {
+                themeBtn.addEventListener('click', () => {
+                    const isDark = document.documentElement.classList.toggle('dark');
+                    if (isDark) {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    } else {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                });
+            }
+        });
+
+        // Subject Modal
+        function openSubjectModal(subjectName) {
+            document.getElementById('modalSubjectTitle').innerText = subjectName;
+            const modalList = document.getElementById('modalChapterList');
+            const extraLinkContainer = document.getElementById('modalExtraLinkContainer');
+            modalList.innerHTML = '';
+
+            const subjectLinks = {
+                "Science": { url: "https://class6th-pratapsanjaysir.blogspot.com/search/label/Science", label: "Open Science Portal" },
+                "Mathematics": { url: "https://class6th-pratapsanjaysir.blogspot.com/search/label/Math", label: "Open Maths Portal" },
+                "Social Science": { url: "https://class6th-pratapsanjaysir.blogspot.com/search/label/Social%20Science", label: "Open SST Portal" },
+                "Computer Science": { url: "https://class6th-pratapsanjaysir.blogspot.com/search/label/computer", label: "Open Computer Portal" }
+            };
+
+            const target = subjectLinks[subjectName];
+            if (target) {
+                extraLinkContainer.innerHTML = `
+                    <a href="${target.url}" target="_blank" class="text-xs text-rose-600 dark:text-rose-400 font-bold hover:underline flex items-center gap-1">
+                        <i class="fas fa-external-link-alt"></i> ${target.label}
+                    </a>
+                `;
+            } else {
+                extraLinkContainer.innerHTML = `
+                    <a href="https://t.me/pratapsanjaysir" target="_blank" class="text-xs text-sky-500 hover:underline flex items-center gap-1">
+                        <i class="fab fa-telegram"></i> Ask Question on Telegram
+                    </a>
+                `;
+            }
+
+            const list = subjectChapters[subjectName] || ["Chapter 1 Notes", "Chapter 2 Notes", "Question Bank"];
+
+            list.forEach(ch => {
+                const item = document.createElement('div');
+                item.className = "p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-center justify-between";
+                item.innerHTML = `
+                    <span class="font-medium text-slate-800 dark:text-slate-200"><i class="fas fa-file-lines text-rose-500 mr-2"></i> ${ch}</span>
+                    <a href="${target ? target.url : '#'}" target="_blank" class="text-rose-600 dark:text-rose-400 font-bold hover:underline text-[11px]">View</a>
+                `;
+                modalList.appendChild(item);
+            });
+
+            document.getElementById('subjectModal').classList.remove('hidden');
+        }
+
+        function closeSubjectModal() {
+            document.getElementById('subjectModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
